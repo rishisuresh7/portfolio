@@ -2,3 +2,14 @@ a {
     text-decoration: none;
     color: black;
 }
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%;
+}
