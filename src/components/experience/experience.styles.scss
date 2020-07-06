@@ -1,0 +1,98 @@
+.experience {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+    .experience-items {
+        width: 70%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+
+        .experience-heading {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+
+            h2 {
+                width: inherit;
+                font-size: 40px;
+                padding-left: 10%;
+                font-family: 'Open Sans';
+                color: white;
+            }
+        }
+
+        .experience-container {
+            width: 100%;
+            height: 80%;
+            display: flex;
+
+            .experience-titles {
+                height: 100%;
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+
+                .experience-titles-container {
+                    width: 60%;
+                    margin-left: 40%;
+                    height: 70%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .experience-title {
+                        height: 15%;
+                        font-family: 'Open Sans';
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        background-color: black;
+                        border: none;
+                        border-left: 1px solid white;
+                        color: white;
+                        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+
+                        &:focus {
+                            outline: none;
+                        }
+                        &:hover {
+                            background-color: rgb(23, 42, 69);
+                            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+                        }
+
+                        &.active {
+                            border-left: 3px solid rgb(100, 255, 218);
+                            background-color: rgb(23, 42, 69);
+                            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+                        }
+                    }
+                }
+            }
+
+            .experience-descriptions {
+                height: 100%;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .experience-description-container {
+                    height: 70%;
+                    width: 80%;
+                    margin: 10%;
+                    color: white;
+                }
+            }
+        }
+    }
+}
