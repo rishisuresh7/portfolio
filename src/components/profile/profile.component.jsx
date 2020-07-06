@@ -17,6 +17,11 @@ class Profile extends React.Component {
         }
     }
 
+    handleLoad = () => {
+        const ele = document.getElementsByClassName('profile-image');
+        ele[0].classList.add('animated');
+    }
+
     handleTick = (i = 0) => {
         const { text, textToRotate, index, isDeleting, element, time, delTime } = this.state;
         const timeOut = isDeleting ? delTime : time;
@@ -66,7 +71,7 @@ class Profile extends React.Component {
                     <div className="profile-image-container">
                         <div className="profile-image-border">
                             <div className="profile-image">
-                                <img src={myImage} alt="profile"/>
+                                <img src={myImage} alt="profile" onLoad={this.handleLoad}/>
                             </div>
                         </div>
                     </div>

@@ -74,13 +74,19 @@
                 .profile-image {
                     position: relative;
                     border: 1px solid white;
-                    top: -5%;
-                    left: -6%;
+                    top: 0%;
+                    left: 0%;
                     z-index: 1;
                     width: 250px;
                     height: 250px;
                     overflow: hidden;
                     border-radius: 3px;
+
+                    &.animated {
+                        top: -5%;
+                        left: -6%;
+                        transition: all 0.5s linear;
+                    }
 
 
                     img {
