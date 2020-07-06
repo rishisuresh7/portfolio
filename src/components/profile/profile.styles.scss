@@ -31,9 +31,22 @@
                 }
     
                 h2 {
+                    display: flex;
                     font-size: 40px;
+
+                    span {
+                        font-size: 40px;
+                    }
+
+                    .animate-cursor {
+                        position: relative;
+                        width: 15px;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid white;
+                        animation: blinker 400ms linear infinite;
+                    }
                 }
-    
+
                 span {
                     font-size: 18px;
                 }
