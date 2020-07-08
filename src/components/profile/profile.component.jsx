@@ -62,7 +62,7 @@ class Profile extends React.Component {
                             A software engineer based in Bangalore, India.
                             I enjoy creating things that live on the internet, whether that be websites, applications,
                             or anything in between. My goal is to always build products that provide performant experiences.
-                            Shortly after graduating from VT University, I joined the R&D team at Cast Software where I work
+                            Shortly before graduating from Visvesvaraya Technological University, I joined the R&D team at Cast Software where I work
                             as a REST API developer in Golang.
                             </p>
                         </div>
@@ -73,6 +73,9 @@ class Profile extends React.Component {
                                 <img src='./assets/img/compressed-removebg.png' alt="profile" onLoad={this.handleLoad}/>
                             </div>
                         </div>
+                    </div>
+                    <div className="get-in-touch-container">
+                        <a href="mailto:rishi9632@gmail.com" className="get-in-touch">Get In Touch</a>
                     </div>
                 </div>
             </div>
