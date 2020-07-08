@@ -8,21 +8,21 @@
     justify-content: center;
     align-items: center;
     background-color: black;
-    opacity: 1;
     font-family: 'Open Sans';
-
-    //not used
-    &.fadein {
-        opacity: 1;
-        margin-top: 0;
-        transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
-    }
 
     .profile-items{
         height: 70%;
         width: 70%;
         display: flex;
         flex-wrap: wrap;
+        opacity: 0;
+        margin-top: 5%;
+
+        &.profile-items-fadein {
+            opacity: 1;
+            margin-top: 0;
+            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95) 0.25s;
+        }
 
         .get-in-touch-container {
             width: 70%;
@@ -111,6 +111,7 @@
                     overflow: hidden;
                     border-radius: 3px;
 
+                    //not used
                     &.animated {
                         top: -5%;
                         left: -6%;

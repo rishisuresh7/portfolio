@@ -17,8 +17,8 @@ class Profile extends React.Component {
     }
 
     handleLoad = () => {
-        const ele = document.getElementsByClassName('profile-image');
-        ele[0].classList.add('animated');
+        const animateElement = document.getElementById('profile-items');
+        animateElement.classList.add('profile-items-fadein');
     }
 
     handleTick = (i = 0) => {
@@ -51,7 +51,7 @@ class Profile extends React.Component {
     render() {
         return (
             <div className="profile">
-                <div className="profile-items">
+                <div className="profile-items" id="profile-items">
                     <div className="profile-content-container">
                         <div className="profile-content">
                             <span>Hi, my name is</span>
