@@ -1,8 +1,7 @@
 import React from 'react';
 import './experience-description.styles.scss';
 
-const ExperienceDescription = (props) => {
-    const {name, description} = props;
+const ExperienceDescription = ({name, description}) => {
     return(
         <div className="description">
             <div className="descpription-heading">

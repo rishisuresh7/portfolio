@@ -31,7 +31,7 @@ const Projects = () => {
         projectLink: 'https://github.com/rishisuresh7/FootBall'
     },]
     return (
-        <div className="projects">
+        <div className="projects" id="projects">
             <div className="projects-title">
                 <h2>Some Projects I've Worked</h2>
             </div>
