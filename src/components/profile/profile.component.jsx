@@ -70,7 +70,7 @@ class Profile extends React.Component {
                     <div className="profile-image-container">
                         <div className="profile-image-border">
                             <div className="profile-image">
-                                <img src='../../assets/img/compressed-removebg.png' alt="profile" onLoad={this.handleLoad}/>
+                                <img src='./assets/img/compressed-removebg.png' alt="profile" onLoad={this.handleLoad}/>
                             </div>
                         </div>
                     </div>
