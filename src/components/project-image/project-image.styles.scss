@@ -1,0 +1,19 @@
+.project-image-container {
+    height: 80%;
+    width: 50%;
+    overflow: hidden;
+
+    .project-image {
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        transform: scale(1.15);
+        transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+
+        &:hover {
+            transform: scale(1);
+            transition: all 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
+    }
+}

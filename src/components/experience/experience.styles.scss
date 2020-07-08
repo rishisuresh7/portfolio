@@ -12,6 +12,14 @@
         height: 70%;
         display: flex;
         flex-direction: column;
+        margin-top: 5%;
+        opacity: 1;
+
+        &.fadein {
+            opacity: 1;
+            margin-top: 0;
+            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
 
         .experience-heading {
             width: 100%;
@@ -66,13 +74,13 @@
                             outline: none;
                         }
                         &:hover {
-                            background-color: rgb(23, 42, 69);
+                            background-color: #092d3e;
                             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
                         }
 
                         &.active {
-                            border-left: 3px solid rgb(100, 255, 218);
-                            background-color: rgb(23, 42, 69);
+                            border-left: 3px solid whitesmoke;
+                            background-color: #092d3e;
                             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
                         }
                     }

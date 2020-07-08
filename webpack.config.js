@@ -1,11 +1,12 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyWebPackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 module.exports = {
     module: {
         rules : [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(jsx?)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
@@ -37,6 +38,14 @@ module.exports = {
         new HtmlWebPackPlugin({
           template: "./src/index.html",
           favicon: "./src/favicon.ico"
+        }),
+        new CopyWebPackPlugin({
+            patterns: [
+                {
+                    from: 'assets/**/*',
+                    context: path.resolve(__dirname, 'src'),
+                },
+            ],
         })
     ],
     devServer: {
