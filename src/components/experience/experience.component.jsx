@@ -93,7 +93,7 @@ class Experience extends React.Component{
             <div className="experience">
                 <div className="experience-items">
                     <div className="experience-heading">
-                        <h2>Where I've Worked</h2>
+                        <h2>My Experience at a glance</h2>
                     </div>
                     <div className="experience-container">
                         <div className="experience-titles">

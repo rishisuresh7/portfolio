@@ -26,14 +26,24 @@
             height: 20%;
             display: flex;
             align-items: flex-end;
-            color: white;
+            font-family: 'Open Sans';
+
 
             h2 {
                 width: inherit;
                 font-size: 40px;
-                padding-left: 10%;
-                font-family: 'Open Sans';
-                color: white;
+                padding-left: 7%;
+                display: flex;
+                align-items: center;
+                color: #5d6550;
+
+                &::after {
+                    content: "";
+                    height: 1px;
+                    width: 350px;
+                    background-color: #b78787;
+                    margin-left: 20px;
+                }
             }
         }
 
@@ -58,12 +68,13 @@
                     flex-direction: column;
 
                     .experience-title {
-                        height: 15%;
+                        height: 25%;
+                        width: 100%;
                         font-family: 'Open Sans';
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        width: 100%;
+                        font-size: 18px;
                         background-color: black;
                         border: none;
                         border-left: 1px solid white;
@@ -79,6 +90,7 @@
                         }
 
                         &.active {
+                            color: darkgrey;
                             border-left: 3px solid whitesmoke;
                             background-color: #092d3e;
                             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;

@@ -33,7 +33,7 @@ const Projects = () => {
     return (
         <div className="projects" id="projects">
             <div className="projects-title">
-                <h2>Some Projects I've Worked</h2>
+                <h2>Some Noteworthy Projects </h2>
             </div>
             {
                 dataObjects.map((data, index) =>

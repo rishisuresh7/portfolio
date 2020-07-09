@@ -1,0 +1,49 @@
+.mail-component {
+    height: 100%;
+    width: 10vw;
+    right: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Open Sans';
+
+    .mail-container {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 15%;
+
+        a {
+            text-decoration: none;
+            color:#a1a58e;
+            writing-mode: vertical-lr;
+            letter-spacing: 4px;
+            transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
+
+            &:hover, :focus {
+                color: white;
+                transform: translateY(-3px);
+                transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+            }
+        }
+    }
+
+    .mail-line-container {
+        height: 10%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-right: 3px;
+
+        .mail-line {
+            height: 100%;
+            width: 1px;
+            background-color: #a1a58e;
+        }
+    }
+}

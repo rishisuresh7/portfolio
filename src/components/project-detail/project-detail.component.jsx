@@ -20,8 +20,8 @@ const ProjectDetail = ({isInverted, name, description, languages, repoLink, proj
                     }
                 </div>
                 <div className={`links ${inverted}`}>
-                    <a href={repoLink} target='_blank'><i className="fa fa-github"></i></a>
                     <a href={projectLink} target='_blank'><i className="fas fa-external-link-alt small"></i></a>
+                    <a href={repoLink} target='_blank'><i className="fa fa-github"></i></a>
                 </div>
             </div>
         </div>
