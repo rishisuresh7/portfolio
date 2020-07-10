@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './projects.styles.scss';
 import Project from '../project/project.component.jsx';
 
@@ -30,9 +30,24 @@ const Projects = () => {
         repoLink: 'https://github.com/rishisuresh7/FootBall',
         projectLink: 'https://github.com/rishisuresh7/FootBall'
     },]
+
+    useEffect(() => {
+        document.addEventListener('scroll', () => {
+            const el = document.getElementById('projects');
+            if ( window.pageYOffset + 400 > el.offsetTop && !el.hasAttribute('animated')) {
+                const eles = document.getElementsByClassName('project');
+                const eleh = document.getElementById("projects-title");
+                eleh.classList.add('fadein');
+                for(let i = 0; i < eles.length; i++)
+                    eles[i].classList.add('fadein');
+                el.setAttribute('animated', true);
+            }
+        })
+    }, []);
+
     return (
         <div className="projects" id="projects">
-            <div className="projects-title">
+            <div className="projects-title" id="projects-title">
                 <h2>Some Noteworthy Projects </h2>
             </div>
             {

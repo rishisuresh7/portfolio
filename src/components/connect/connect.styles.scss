@@ -7,6 +7,12 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    opacity: 0;
+
+    &.display {
+        opacity: 1;
+        transition: opacity 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
 
     .connect-container {
         width: 100%;

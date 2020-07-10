@@ -14,6 +14,14 @@
         align-items: center;
         color: #b78787;
         font-family: 'Open Sans';
+        margin-top: 15vh;
+        opacity: 0;
+
+        &.fadein {
+            opacity: 1;
+            margin-top: 10vh;
+            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        }
 
         h2 {
             width: 100%;

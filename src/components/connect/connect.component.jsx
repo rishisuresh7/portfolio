@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './connect.styles.scss';
 
 const Connect = () => {
+
+    useEffect(() => {
+        const connectElement = document.getElementById('connect-component');
+        const mailElement = document.getElementById('mail-component');
+        setTimeout(() => {
+            connectElement.classList.add('display');
+            mailElement.classList.add('display');
+        }, 500);
+    }, []);
+
     return(
-        <div className="connect-component">
+        <div className="connect-component" id="connect-component">
             <div className="connect-container">
                 <div className="connect-item">
                     <a href="https://www.linkedin.com/in/rishi-suresh/" target="_blank"><i className = "fa fa-linkedin"></i></a>

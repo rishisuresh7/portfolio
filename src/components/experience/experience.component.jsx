@@ -7,6 +7,7 @@ class Experience extends React.Component{
         super();
 
         this.state = {
+            isAnimated: false,
             items: [{
                     id: 1,
                     name: 'Cast Software',
@@ -86,12 +87,22 @@ class Experience extends React.Component{
         this.setState({...this.state, selectedId: parseInt(event.target.value) });
     }
 
+    componentDidMount = () => {
+        const experienceDiv = document.getElementById('experience-items');
+        document.addEventListener('scroll', () => {
+            if (window.pageYOffset > experienceDiv.offsetTop/2 && !this.state.isAnimated) {
+                experienceDiv.classList.add('fadein');
+                this.setState({...this.state, isAnimated: true})
+            }
+        })
+    }
+
     render() {
         const {items, selectedId} = this.state;
         const selectedItem = items.find(item => item.id === selectedId);
         return (
-            <div className="experience">
-                <div className="experience-items">
+            <div className="experience" id="experience">
+                <div className="experience-items" id="experience-items">
                     <div className="experience-heading">
                         <h2>My Experience at a glance</h2>
                     </div>

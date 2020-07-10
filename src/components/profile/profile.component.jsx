@@ -50,13 +50,13 @@ class Profile extends React.Component {
 
     render() {
         return (
-            <div className="profile">
+            <div className="profile" id="profile">
                 <div className="profile-items" id="profile-items">
                     <div className="profile-content-container">
                         <div className="profile-content">
-                            <span>Hi, my name is</span>
+                            <span>Hi, this is </span>
                             <h1>Rishi Suresh.</h1>
-                            <h2>I build things&nbsp;<span id='data-animate' data-rotate='["for the web.", "for the world.", "for the future."]'>
+                            <h2>I build things&nbsp;<span id='data-animate' data-rotate='["for the web.", "for the future."]'>
                                 </span><span className='animate-cursor'></span></h2>
                             <p>
                             A software engineer based in Bangalore, India.
