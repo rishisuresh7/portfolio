@@ -22,6 +22,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            opacity: 0;
     
             span {
                 pointer-events: none;
@@ -30,6 +31,11 @@
                 padding: 20px;
                 margin-left: 10%;
                 border-radius: 50%;
+            }
+
+            &.fadein {
+                opacity: 1;
+                transition: opacity 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
             }
         }
 
@@ -48,8 +54,26 @@
                 width: 15%;
                 color: white;
                 display: flex;
-                align-items: center;
                 justify-content: center;
+                opacity: 0;
+
+                span {
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                }
+
+                &.fadein {
+
+                    span {
+                        top: 50%;
+                        transform: translateY(-50%);
+                        transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+                    }
+
+                    opacity: 1;
+                    transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+                }
             }
         }
     }
