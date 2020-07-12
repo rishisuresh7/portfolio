@@ -42,7 +42,7 @@ const Projects = () => {
                     eles[i].classList.add('fadein');
                 el.setAttribute('animated', true);
             }
-        })
+        });
     }, []);
 
     return (

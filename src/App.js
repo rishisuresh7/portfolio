@@ -6,6 +6,7 @@ import Experience from './components/experience/experience.component.jsx';
 import Projects from './components/projects/projects.component.jsx';
 import Connect from './components/connect/connect.component.jsx';
 import Mail from './components/mail/mail.component.jsx';
+import TechStack from './components/tech-stack/tech-stack.component.jsx';
 
 const App = () =>{
     return (
@@ -16,6 +17,7 @@ const App = () =>{
             <Projects/>
             <Connect/>
             <Mail/>
+            <TechStack/>
         </div>
     )
 }

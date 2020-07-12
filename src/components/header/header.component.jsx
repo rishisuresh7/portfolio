@@ -8,7 +8,7 @@ const Header = () => {
         const elements = document.querySelectorAll('#animate-header');
         let t = 20;
         const addAnimation = (i = 0) => {
-            if (i >= 4) {
+            if (i >= elements.length) {
                 return
             } else {
                 t += 20;
@@ -44,6 +44,7 @@ const Header = () => {
                     <a className = "header-option" href="profile" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Home</span></a>
                     <a className = "header-option" href="experience" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Experience</span></a>
                     <a className = "header-option" href="projects" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Projects</span></a>
+                    <a className = "header-option" href="techSkills" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Tech Stack</span></a>
             </div>
            </div>
         </div>

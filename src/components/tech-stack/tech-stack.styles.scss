@@ -1,0 +1,25 @@
+.tech-stack-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-stack {
+    position: relative;
+    top: 100px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    opacity: 0;
+
+    &.fadein {
+        opacity: 1;
+        transform: translateY(-100px);
+        transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+}

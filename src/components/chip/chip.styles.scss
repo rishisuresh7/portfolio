@@ -1,0 +1,33 @@
+.chip {
+    margin: 0 0 0 15px;
+    height: 50px;
+    max-width: 200px;
+    min-width: 150px;
+    border-radius: 25px;
+    font-family: 'Open Sans';
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        float: left;
+        color: white;
+    }
+
+    span {
+        line-height: 50px;
+        color: white;
+        padding: 0 0 0 3px;
+        font-size: 14px;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        pointer-events: none;
+    }
+
+    &.animated {
+        transform: scale(1.2);
+        transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+}
