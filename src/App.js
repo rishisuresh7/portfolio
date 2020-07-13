@@ -7,6 +7,7 @@ import Projects from './components/projects/projects.component.jsx';
 import Connect from './components/connect/connect.component.jsx';
 import Mail from './components/mail/mail.component.jsx';
 import TechStack from './components/tech-stack/tech-stack.component.jsx';
+import Footer from './components/footer/footer.component.jsx';
 
 const App = () =>{
     return (
@@ -18,6 +19,7 @@ const App = () =>{
             <Connect/>
             <Mail/>
             <TechStack/>
+            <Footer/>
         </div>
     )
 }

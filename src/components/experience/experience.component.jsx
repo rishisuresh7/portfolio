@@ -11,22 +11,27 @@ class Experience extends React.Component{
             items: [{
                     id: 1,
                     name: 'Cast Software',
-                    isSelected: true,
                     description: {
                         role: 'Junior Software Engineer',
                         period: 'Feb 2019 - Present',
-                        responsibilities: [{
+                        responsibilities: [
+                            {
                                 id: 1,
-                                text: 'Write modern, performant, maintainable code for a diverse array of client and internal projects'
+                                text: 'Develop scalable and independent microservices based on a multi tenant design.'
                             },
                             {
                                 id: 2,
-                                text: `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript,
-                                TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify`
+                                text: `Work with a variety of different languages, platforms and frameworks,
+                                        such as Golang, JavaScript, Docker and Neo4j.`
                             },
                             {
                                 id: 3,
-                                text: 'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis'
+                                text: 'Consult with engineering team members to determine system loads and develop and improvise improvement plans.'
+                            },
+                            {
+                                id: 4,
+                                text: `Test troubleshooting methods, devise innovative solutions, and document resolutions for 
+                                        inclusion in knowledge base for usage by support team.`
                             }
                         ]
                     },
@@ -34,22 +39,20 @@ class Experience extends React.Component{
                 {
                     id: 2,
                     name: 'Keitai Technologies',
-                    isSelected: false,
                     description: {
                         role: 'WD Intern',
                         period: 'Jan 2019 - Feb 2019',
                         responsibilities: [{
                                 id: 1,
-                                text: 'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis'
+                                text: 'Work on different HTML pages designed for web, cross built for a web application.'
                             },
                             {
                                 id: 2,
-                                text: 'Write modern, performant, maintainable code for a diverse array of client and internal projects'
+                                text: 'Design REST API calls to a microservice hosted on AWS to provide authentication on the web-app.'
                             },
                             {
                                 id: 3,
-                                text: `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript,
-                                TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify`
+                                text: `Gain a better knowledge on RESTful API's and error schemes, improve knowledge in JS and some frameworks.`
                             }
                         ]
                     },
@@ -57,22 +60,21 @@ class Experience extends React.Component{
                 {
                     id: 3,
                     name: 'Azure Skynet',
-                    isSelected: false,
                     description: {
                         role: 'Summer Trainee',
                         period: 'Aug 2017 - Aug 2017',
                         responsibilities: [{
                                 id: 1,
-                                text: `Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript,
-                                TypeScript, Gatsby, React, Craft, Wordpress, Prismic, and Netlify`
+                                text: `Build proficiency in different networking tools such as nmap, zenmap, wireshark etc..`
                             },
                             {
                                 id: 2,
-                                text: 'Write modern, performant, maintainable code for a diverse array of client and internal projects'
+                                text: 'Study the aspects of social engineering to understand in a better way, loopholes in security.'
                             },
                             {
                                 id: 3,
-                                text: 'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis'
+                                text: `Re-iterate on networking models IPv4/IPv6 to understand networking protocols, 
+                                        NAT and other network transmission scenarios`
                             }
                         ]
                     },

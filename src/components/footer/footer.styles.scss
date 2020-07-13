@@ -1,0 +1,26 @@
+.footer {
+    width: 100%;
+    height: 6vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+
+        span {
+            letter-spacing: 2px;
+            color: aqua;
+            font-size: 12px;
+            line-height: 1;
+            transition: all 0.3s ease-in;
+        }
+
+        &:hover {
+            span {
+                color: white;
+                transition: all 0.3s ease-in;
+            }
+        }
+    }
+}
