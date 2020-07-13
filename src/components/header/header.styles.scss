@@ -53,7 +53,6 @@
             align-items: center;
     
             .header-option {
-                font-family: 'Open Sans';
                 font-size: 15px;
                 height: 100%;
                 width: 12%;
@@ -67,6 +66,7 @@
                     z-index: -1;
                     position: absolute;
                     top: 0;
+                    cursor: pointer;
                 }
 
                 &.fadein {
@@ -79,6 +79,33 @@
 
                     opacity: 1;
                     transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+                }
+
+                &.icon {
+                    height: 50%;
+                    width: 5%;
+                    color: black;
+                    align-items: center;
+                    font-size: 22px;
+                    opacity: 0;
+                    cursor: pointer;
+
+                    i {
+                        position: absolute;
+                        top: 0;
+                    }
+
+                    &.fadein {
+
+                        i {
+                            top: 50%;
+                            transform: translateY(-50%);
+                            transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+                        }
+
+                        opacity: 1;
+                        transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+                    }
                 }
             }
         }
