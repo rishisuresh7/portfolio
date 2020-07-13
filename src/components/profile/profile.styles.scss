@@ -7,7 +7,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
     font-family: 'Open Sans';
 
     .profile-items{
@@ -33,15 +32,15 @@
                 width: 150px;
                 height: 60px;
                 border-radius: 5px;
-                color: white;
+                color: cadetblue;
                 text-decoration: none;
-                border: 1px solid white;
+                border: 1px solid cadetblue;
                 text-align: center;
                 line-height: 60px;
                 transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
                 &:hover {
-                    background-color: #092d3e;;
+                    background-color: #092d3e;
                     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
                 }
             }
@@ -58,19 +57,20 @@
                 padding-left: 10%;
                 padding-right: 10%;
                 margin-top: 12%;
-                color: white;
+                color: aliceblue;
+                letter-spacing: 1px;
 
                 h1 {
                     font-size: 54px;
-                    color: aqua;
+                    color: #b19d9d;
                 }
     
                 h2 {
                     display: flex;
-                    font-size: 40px;
+                    font-size: 36px;
 
                     span {
-                        font-size: 40px;
+                        font-size: 36px;
                     }
 
                     .animate-cursor {
@@ -102,28 +102,18 @@
 
             .profile-image-border {
                 border: 2px solid white;
-                border-radius: 3px;
+                border-radius: 50%;
                 width: 250px;
                 height: 250px;
 
                 .profile-image {
                     position: relative;
-                    border: 1px solid white;
-                    top: -5%;
-                    left: -6%;
+                    border: 1px solid black;
                     z-index: 1;
                     width: 250px;
                     height: 250px;
                     overflow: hidden;
-                    border-radius: 3px;
-
-                    //not used
-                    &.animated {
-                        top: -5%;
-                        left: -6%;
-                        transition: all 0.5s linear;
-                    }
-
+                    border-radius: 50%;
 
                     img {
                         transform: scale(0.60);

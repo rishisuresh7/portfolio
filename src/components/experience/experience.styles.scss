@@ -5,7 +5,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: black;
 
     .experience-items {
         width: 70%;
@@ -75,23 +74,24 @@
                         justify-content: center;
                         align-items: center;
                         font-size: 14px;
-                        background-color: black;
+                        background: transparent;
                         border: none;
-                        border-left: 1px solid white;
                         color: white;
                         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
                         &:focus {
                             outline: none;
                         }
+
                         &:hover {
                             background-color: #092d3e;
+                            border-radius: 5px;
                             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
                         }
 
                         &.active {
                             color: darkgrey;
-                            border-left: 3px solid whitesmoke;
+                            border: 3px solid #164d7b;
                             background-color: #092d3e;
                             border-radius: 5px;
                             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);

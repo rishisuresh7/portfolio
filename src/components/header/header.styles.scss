@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background: linear-gradient(to right, #000000, #434343);
 
     .header-content {
         height: 80%;
@@ -27,7 +27,7 @@
             span {
                 pointer-events: none;
                 background-color: #4f2e45;
-                color: white;
+                color: darkturquoise;
                 padding: 20px;
                 margin-left: 10%;
                 border-radius: 50%;
@@ -52,7 +52,8 @@
                 font-size: 15px;
                 height: 100%;
                 width: 15%;
-                color: white;
+                color: darkturquoise;
+                letter-spacing: 1px;
                 display: flex;
                 justify-content: center;
                 opacity: 0;
