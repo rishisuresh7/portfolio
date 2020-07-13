@@ -11,8 +11,8 @@ import Footer from './components/footer/footer.component.jsx';
 
 const App = () =>{
     return (
-        <div className='App'>
-            <Header/>
+        <div className='App' id='app'>
+            <Header id="header"/>
             <Profile/>
             <Experience/>
             <Projects/>

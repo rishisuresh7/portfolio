@@ -57,8 +57,15 @@ const Settings = () => {
         event.target.style.background = '';
     }
 
+    const handleClick = (event) => {
+        const elements = ["header", "root", "settings"];
+        for(let i = 0; i < elements.length; i++) {
+            document.getElementById(elements[i]).style.background = event.target.getAttribute('style-id');
+        }
+    }
+
     return (
-        <div className="settings-container">
+        <div className="settings-container" id='settings'>
             <div className="items">
                 {
                     styles.map(({name, style}, index) =>
@@ -67,6 +74,7 @@ const Settings = () => {
                     style-id = {style}
                     onMouseOver = {mouseOver}
                     onMouseLeave = {mouseLeave}
+                    onClick = {handleClick}
                     >
                         {name}
                     </span>)
