@@ -26,9 +26,13 @@
     
             span {
                 pointer-events: none;
-                background-color: #4f2e45;
+                border: 2px solid #443737;
                 color: darkturquoise;
-                padding: 20px;
+                height: 60px;
+                width: 60px;
+                font-size: 30px;
+                text-align: center;
+                line-height: 60px;
                 margin-left: 10%;
                 border-radius: 50%;
             }
