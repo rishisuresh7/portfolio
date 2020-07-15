@@ -7,10 +7,18 @@ a {
     padding: 0;
 }
 
+body {
+    height: 100vh;
+    overflow: scroll;
+    background: black;
+}
+
 .App {
     display: flex;
     flex-flow: row wrap;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     font-family: 'Open Sans';
+    box-sizing: border-box;
+    background: linear-gradient(to right, black, rgb(67, 67, 67));
 }
