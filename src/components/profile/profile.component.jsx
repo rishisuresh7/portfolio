@@ -1,9 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import './profile.styles.scss';
 
 class Profile extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             text: '',
@@ -49,15 +50,18 @@ class Profile extends React.Component {
     }
 
     render() {
+        const {name} = this.props.user;
         return (
             <div className="profile" id="profile">
                 <div className="profile-items" id="profile-items">
                     <div className="profile-content-container">
                         <div className="profile-content">
                             <span>Hi, this is </span>
-                            <h1>Rishi Suresh.</h1>
-                            <h2>I build things&nbsp;<span id='data-animate' data-rotate='["for the web.", "for the future."]'>
-                                </span><span className='animate-cursor'></span></h2>
+                            <h1>{name}.</h1>
+                            <h2>I build things&nbsp;
+                                <span id='data-animate' data-rotate='["for the web.", "for the future."]'>for the web.</span>
+                                <span className='animate-cursor'></span>
+                            </h2>
                             <p>
                             A software engineer based in Bangalore, India.
                             I enjoy creating things that live on the internet, whether that be websites, applications,
@@ -83,4 +87,8 @@ class Profile extends React.Component {
     }
 }
 
-export default Profile;
+const mapStateToProps = state => ({
+    user: state.user
+})
+
+export default connect(mapStateToProps)(Profile);
