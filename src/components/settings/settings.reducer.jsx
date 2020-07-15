@@ -1,7 +1,9 @@
 import { SET_BACKGROUND } from './settings.types.jsx'
+import {styles} from './settings.data.js';
 
 const initState = {
-    currentBackground: ''
+    currentBackground: '',
+    styles: styles
 }
 
 const setBackgroundReducer = ( state = initState, action) => {
