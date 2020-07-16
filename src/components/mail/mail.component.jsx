@@ -1,11 +1,11 @@
 import React from 'react';
 import './mail.styles.scss';
 
-const Mail = () => {
+const Mail = ({email}) => {
     return (
         <div className="mail-component" id="mail-component">
             <div className="mail-container">
-                <a href="mailto:rishi9632@gmail.com" target="_blank">rishi9632@gmail.com</a>
+                <a href={`mailto:${email}`} target="_blank">{email}</a>
             </div>
             <div className="mail-line-container">
                 <div className="mail-line"></div>

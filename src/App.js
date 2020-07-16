@@ -10,7 +10,7 @@ import TechStack from './components/tech-stack/tech-stack.component.jsx';
 import Footer from './components/footer/footer.component.jsx';
 import './App.scss';
 
-const App = ({signature}) =>{
+const App = ({signature, email}) =>{
     return (
         <div className='App' id='app'>
             <Header id="header"/>
@@ -18,7 +18,7 @@ const App = ({signature}) =>{
             <Experience/>
             <Projects/>
             <Connect/>
-            <Mail/>
+            <Mail email={email}/>
             <TechStack/>
             <Footer name={signature}/>
         </div>
@@ -26,7 +26,8 @@ const App = ({signature}) =>{
 }
 
 const mapStateToProps = state => ({
-    signature: state.user.signature
+    signature: state.user.signature,
+    email: state.user.email
 })
 
 export default connect(mapStateToProps)(App);
