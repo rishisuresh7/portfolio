@@ -1,6 +1,7 @@
 import config from '../config.json';
 import { INIT_HEADER } from '../components/header/header.types.jsx';
 import { INIT_PROFILE } from '../components/profile/profile.types';
+import { INIT_PROJECTS } from '../components/projects/projects.types.jsx';
 
 export const initialize = (type) => {
     switch(type) {
@@ -8,6 +9,8 @@ export const initialize = (type) => {
             return initHeader(config.bio, config.styles);
         case INIT_PROFILE:
             return initProfile(config.bio);
+        case INIT_PROJECTS:
+            return initProjects(config.projectsInfo);
     }
 }
 
@@ -34,5 +37,25 @@ const initProfile = (bio) => {
         imageUrl: bio && bio.imageUrl ? bio.imageUrl : '',
         email: bio && bio.email ? bio.email : '',
         signature: bio && bio.signature ? bio.signature : ''
+    }
+}
+
+const initProjects = (projects) => {
+    let allProjects = [];
+    if(projects && projects.projects && projects.projects.length) {
+        allProjects = projects.projects.map(project => {
+            return {
+                name: project.name ? project.name : '',
+                image: project.image ? project.image : '',
+                description: project.description ? project.description : '',
+                languages: project.languages ? project.languages : [],
+                repoLink: project.repoLink ? project.repoLink : '',
+                projectLink: project.projectLink ? project.projectLink : ''
+            }
+        });
+    }
+    return {
+        projects: allProjects,
+        heading: projects && projects.heading ? projects.heading : '',
     }
 }

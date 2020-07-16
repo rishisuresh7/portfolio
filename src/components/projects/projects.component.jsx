@@ -1,11 +1,13 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import Project from '../project/project.component.jsx';
+import { initProjects } from './projects.actions.jsx';
 import './projects.styles.scss';
 
-const Projects = ({projects, projectsHeading}) => {
+const Projects = ({projects, projectsHeading, initializeProjects}) => {
 
     useEffect(() => {
+        initializeProjects();
         document.addEventListener('scroll', () => {
             const el = document.getElementById('projects');
             if ( window.pageYOffset + 400 > el.offsetTop && !el.hasAttribute('animated')) {
@@ -42,4 +44,8 @@ const mapStateToProps = state => ({
     projectsHeading: state.project.heading
 })
 
-export default connect(mapStateToProps)(Projects);
+const mapDispatchToProps = dispatch => ({
+    initializeProjects: () => dispatch(initProjects())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Projects);
