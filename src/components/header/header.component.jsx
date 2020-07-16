@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {setShowSettings} from './header.actions.jsx';
 import Settings from '../settings/settings.component.jsx';
+import {initHeader} from './header.actions.jsx';
 import './header.styles.scss';
 
-const Header = ({setShowSettings, showSettings, logo}) => {
+const Header = ({setShowSettings, showSettings, logo, initHeader}) => {
 
     useEffect(() => {
+        initHeader();
         const elements = document.querySelectorAll('#animate-header');
         let t = 20;
         const addAnimation = (i = 0) => {
@@ -68,7 +70,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    setShowSettings: (payload) => dispatch(setShowSettings(payload))
+    setShowSettings: (payload) => dispatch(setShowSettings(payload)),
+    initHeader: () => dispatch(initHeader())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

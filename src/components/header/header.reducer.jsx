@@ -1,16 +1,16 @@
-import {SHOW_SETTINGS} from './header.types.jsx';
+import {SHOW_SETTINGS, INIT_HEADER} from './header.types.jsx';
 
-const initState = {
-    showSettings: false,
-    projectLogo: 'RS'
-}
-
-const headerReducer = (state = initState, action) => {
+const headerReducer = (state = {}, action) => {
     switch(action.type) {
         case SHOW_SETTINGS:
             return {
                 ...state,
                 showSettings: action.payload
+            }
+        case INIT_HEADER:
+            return {
+                ...state,
+                ...action.payload
             }
         default:
             return state
