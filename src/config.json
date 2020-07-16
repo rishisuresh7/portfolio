@@ -17,18 +17,23 @@
     },
     "connections": [
         {
+            "type": "linkedin",
             "link": "https://www.linkedin.com/in/rishi-suresh/"
         },
         {
+            "type": "github",
             "link": "https://github.com/rishisuresh7"
         },
         {
+            "type": "phone",
             "link": "tel:+918792615476"
         },
         {
+            "type": "mail",
             "link": "mailto:rishi9632@gmail.com"
         },
         {
+            "type": "instagram",
             "link": "https://www.instagram.com/rishisuresh7/"
         }
     ],

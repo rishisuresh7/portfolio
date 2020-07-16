@@ -4,6 +4,7 @@ import { INIT_PROFILE } from '../components/profile/profile.types';
 import { INIT_PROJECTS } from '../components/projects/projects.types.jsx';
 import { INIT_SETTINGS } from '../components/settings/settings.types.jsx';
 import { INIT_TECH_STACK } from '../components/tech-stack/tech-stack.types.jsx';
+import { INIT_CONNECT } from '../components/connect/connect.types.jsx';
 
 export const initialize = (type) => {
     switch(type) {
@@ -17,6 +18,8 @@ export const initialize = (type) => {
             return initSettings(config.styles);
         case INIT_TECH_STACK:
             return initTechStack(config.technologies);
+        case INIT_CONNECT:
+            return initConnect(config.connections);
     }
 }
 
@@ -99,5 +102,34 @@ const initTechStack = (technologies) => {
 
     return {
         techStack: newTechStack
+    }
+}
+
+const initConnect = (connections) => {
+    let newConnections = [];
+    console.log(connections)
+    let i = 0;
+    if (connections && connections.length) {
+        newConnections = connections.map(conn => {
+            let linkType = 'fa fa-'
+            linkType += conn.type ? conn.type : 'exclamation-triangle';
+            if (conn.type && conn.type.toLowerCase().includes('mail')) {
+                linkType = 'fa fa-envelope'
+            }
+            if (linkType.includes('instagram')) {
+                linkType += ' large'
+            }
+            console.log(linkType)
+
+            return {
+                id: i++,
+                link: conn.link ? conn.link : '',
+                name: linkType
+            }
+        });
+    }
+
+    return {
+        connections: newConnections
     }
 }

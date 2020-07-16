@@ -1,0 +1,1 @@
+export const INIT_CONNECT = 'INIT_CONNECTIONS';

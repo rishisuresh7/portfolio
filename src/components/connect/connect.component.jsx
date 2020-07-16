@@ -1,10 +1,12 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
+import {initConnect} from './connect.actions.jsx';
 import './connect.styles.scss';
 
-const Connect = ({connections}) => {
+const Connect = ({connections, initConnections}) => {
 
     useEffect(() => {
+        initConnections();
         const connectElement = document.getElementById('connect-component');
         const mailElement = document.getElementById('mail-component');
         setTimeout(() => {
@@ -34,4 +36,8 @@ const mapStateToProps = state => ({
     connections: state.connect.connections
 })
 
-export default connect(mapStateToProps)(Connect);
+const mapDispatchToProps = dispatch => ({
+    initConnections: () => dispatch(initConnect()) 
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Connect);
