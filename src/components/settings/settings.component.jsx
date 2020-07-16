@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
-import {setBackground} from './settings.actions.jsx';
+import {setBackground, initSettings} from './settings.actions.jsx';
 import './settings.styles.scss';
 
-const Settings = ({currentBackground, styles, setBackground}) => {
+const Settings = ({currentBackground, styles, setBackground, initSettings}) => {
+
+    useEffect(() => {
+        initSettings();
+    }, []);
+
     const mouseOver = (event) => {
        event.target.style.background = event.target.getAttribute('style-id');
     }
@@ -46,7 +51,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    setBackground: (background) => dispatch(setBackground(background))
+    setBackground: (background) => dispatch(setBackground(background)),
+    initSettings: () => dispatch(initSettings())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Settings);

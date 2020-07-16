@@ -122,7 +122,7 @@
             },
             {
                 "name": "Sunset",
-                "style": "inear-gradient(to right, #0b486b, #f56217)"
+                "style": "linear-gradient(to right, #0b486b, #f56217)"
             },
             {
                 "name": "Deep Space",

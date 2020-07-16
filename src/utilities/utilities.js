@@ -2,6 +2,7 @@ import config from '../config.json';
 import { INIT_HEADER } from '../components/header/header.types.jsx';
 import { INIT_PROFILE } from '../components/profile/profile.types';
 import { INIT_PROJECTS } from '../components/projects/projects.types.jsx';
+import { INIT_SETTINGS } from '../components/settings/settings.types.jsx';
 
 export const initialize = (type) => {
     switch(type) {
@@ -11,6 +12,8 @@ export const initialize = (type) => {
             return initProfile(config.bio);
         case INIT_PROJECTS:
             return initProjects(config.projectsInfo);
+        case INIT_SETTINGS:
+            return initSettings(config.styles);
     }
 }
 
@@ -54,8 +57,26 @@ const initProjects = (projects) => {
             }
         });
     }
+
     return {
         projects: allProjects,
         heading: projects && projects.heading ? projects.heading : '',
+    }
+}
+
+const initSettings = (settings) => {
+    let allStyles = [];
+    if (settings && settings.otherStyles && settings.otherStyles.length) {
+        allStyles = settings.otherStyles.map(style => {
+            return {
+                name: style.name ? style.name : '',
+                style: style.style ? style.style : ''
+            }
+        });
+    }
+
+    return {
+        currentBackground: settings && settings.defaultBackground ? settings.defaultBackground : 'linear-gradient(to right, #000000, #434343)',
+        styles: allStyles
     }
 }

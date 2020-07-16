@@ -1,1 +1,2 @@
-export const SET_BACKGROUND = 'SET_BACKGROUND'
+export const SET_BACKGROUND = 'SET_BACKGROUND';
+export const INIT_SETTINGS = 'INIT_SETTINGS';
