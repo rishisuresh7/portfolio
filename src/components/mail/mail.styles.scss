@@ -1,7 +1,7 @@
 .mail-component {
     height: 100%;
     width: 10vw;
-    right: 0;
+    left: 0;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -29,11 +29,12 @@
             color: azure;
             writing-mode: vertical-lr;
             letter-spacing: 4px;
+            transform: rotate(180deg);
             transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s;
 
             &:hover, :focus {
                 color: white;
-                transform: translateY(-3px);
+                transform: translateY(-3px) rotate(180deg);
                 transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
             }
         }
@@ -44,7 +45,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        padding-right: 3px;
+        padding-left: 3px;
 
         .mail-line {
             height: 100%;
