@@ -1,0 +1,222 @@
+{
+    "bio" : {
+        "name": "Rishi Suresh.",
+        "rotateText": {
+            "primaryText": "I build things",
+            "secondaryText": ["for the web.", "for the future."]
+        },
+        "animateText": true,
+        "alternateText": "I build things for the world.",
+        "typeTime": 200,
+        "deleteTime": 100,
+        "about": "A software engineer based in Bangalore, India. \nI enjoy creating things that live on the internet, whether that be websites, applications, \nor anything in between. My goal is to always build products that provide performant experiences. \nShortly before graduating from Visvesvaraya Technological University, I joined the R&D team at Cast Software where I work \nas a REST API developer in Golang.",
+        "imageUrl": "./assets/img/compressed-removebg.png",
+        "email": "rishi9632@gmail.com",
+        "signature": "Developed By Rishi Suresh.",
+        "projectLogo": "RS"
+    },
+    "connections": [
+        {
+            "link": "https://www.linkedin.com/in/rishi-suresh/"
+        },
+        {
+            "link": "https://github.com/rishisuresh7"
+        },
+        {
+            "link": "tel:+918792615476"
+        },
+        {
+            "link": "mailto:rishi9632@gmail.com"
+        },
+        {
+            "link": "https://www.instagram.com/rishisuresh7/"
+        }
+    ],
+    "experience" : [{
+        "companyName": "Cast Software",
+        "jobDescription": {
+            "role": "Junior Software Engineer",
+            "period": "Feb 2019 - Present",
+            "responsibilities": [
+                {
+                    "responsibility": "Develop scalable and independent microservices based on a multi tenant design."
+                },
+                {
+                    "responsibility": "Work with a variety of different languages, platforms and frameworks, such as Golang, JavaScript, Docker and Neo4j."
+                },
+                {
+                    "responsibility": "Consult with engineering team members to determine system loads and develop and improvise improvement plans."
+                },
+                {
+                    "responsibility": "Test troubleshooting methods, devise innovative solutions, and document resolutions for inclusion in knowledge base for usage by support team."
+                }
+            ]
+        }
+    },
+    {
+        "companyName": "Keitai Technologies",
+        "jobDescription": {
+            "role": "WD Intern",
+            "period": "Jan 2019 - Feb 2019",
+            "responsibilities": [{
+                "responsibility": "Work on different HTML pages designed for web, cross built for a web application."
+                },
+                {
+                    "responsibility": "Design REST API calls to a microservice hosted on AWS to provide authentication on the web-app."
+                },
+                {
+                    "responsibility": "Gain a better knowledge on RESTful API's and error schemes, improve knowledge in JS and some frameworks."
+                }
+            ]
+        }
+    },
+    {
+        "companyName": "Azure Skynet",
+        "jobDescription": {
+            "role": "Summer Trainee",
+            "period": "Aug 2017 - Aug 2017",
+            "responsibilities": [{
+                    "responsibility": "Build proficiency in different networking tools such as nmap, zenmap, wireshark etc.."
+                },
+                {
+                    "responsibility": "Study the aspects of social engineering to understand in a better way, loopholes in security."
+                },
+                {
+                    "responsibility": "Re-iterate on networking models IPv4/IPv6 to understand networking protocols, NAT and other network transmission scenarios"
+                }
+            ]
+        }
+    }],
+    "projectsInfo": {
+        "projects": [{
+            "name": "Reuse Store - Back End",
+            "image": "./assets/img/reuse_store_backend.png",
+            "description": "A Golang based  REST API mux server used as the backend service for Resue Store - Front End project.\nImplements JWT tokens for login and authentication, API security is provided using secret key mechanism. Uses MONGO\nas backend database to save store details",
+            "languages": ["Golang", "JWT", "MongoDB", "Docker"],
+            "repoLink": "https://github.com/rishisuresh7/shopping",
+            "projectLink": "https://github.com/rishisuresh7/shopping"
+        },{
+            "name": "Reuse Store - Front End",
+            "image": "./assets/img/reuse_store.png",
+            "description": "A simple website(basic functionalities) based on React which uses Redux for state management\nand redux sagas to make API calls. Component based architecture with each component\nbeing used as a state store as and when required. Also includes hooks and uses stripe checkouts for payments.",
+            "languages": ["React.js", "Redux", "Firebase", "Stripe"],
+            "repoLink": "https://github.com/rishisuresh7/Shopping-react",
+            "projectLink": "https://rishisuresh7.github.io/Shopping-react"
+        },{
+            "name": "Ajax FootBall",
+            "image": "./assets/img/ajax_football.png",
+            "description": "A static website developed at university level using the concept of AJAX to\nsearch a database for football players/teams and return relevant details",
+            "languages": ["HTML", "CSS", "PHP", "MySQL", "Ajax"],
+            "repoLink": "https://github.com/rishisuresh7/FootBall",
+            "projectLink": "https://github.com/rishisuresh7/FootBall"
+        }],
+        "heading": "Some Noteworthy Projects"
+    },
+    "styles" : {
+        "defaultBackground": "linear-gradient(to right, #000000, #434343)",
+        "otherStyles" : [
+            {
+                "name": "Royal",
+                "style": "linear-gradient(to right, #141e30, #243b55)"
+            },
+            {
+                "name": "Sunset",
+                "style": "inear-gradient(to right, #0b486b, #f56217)"
+            },
+            {
+                "name": "Deep Space",
+                "style": "linear-gradient(to right, #000000, #434343)"
+            },
+            {
+                "name": "Dark Skies",
+                "style": "linear-gradient(to right, #283e51, #4b79a1)"
+            },
+            {
+                "name": "Netflix",
+                "style": "linear-gradient(to right, #8e0e00, #1f1c18)"
+            },
+            {
+                "name": "Lizard",
+                "style": "linear-gradient(to right, #304352, #d7d2cc)"
+            },
+            {
+                "name": "Curiousity Blue",
+                "style": "linear-gradient(to right, #525252, #3d72b4)"
+            },
+            {
+                "name": "Instagram",
+                "style": "linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)"
+            },
+            {
+                "name": "Talking To Myself",
+                "style": "linear-gradient(to right, #948e99, #2e1437)"
+            },
+            {
+                "name": "Hersheys",
+                "style": "linear-gradient(to right, #1e130c, #9a8478)"
+            },
+            {
+                "name": "Between The Clouds",
+                "style": "linear-gradient(to right, #73c8a9, #373b44)"
+            }
+        ]
+    },
+    "technologies" : [
+        {
+            "name": "Golang",
+            "icon": "./assets/img/go-avatar.png"
+        },
+        {
+            "name": "Neo4j",
+            "icon": "./assets/img/neo4j-avatar.png"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "./assets/img/js-avatar.png"
+        },
+        {
+            "name": "React.js",
+            "icon": "./assets/img/react-avatar.png"
+        },
+        {
+            "name": "Redux",
+            "icon": "./assets/img/redux-avatar.png"
+        },
+        {
+            "name": "Git",
+            "icon": "./assets/img/git-avatar.png"
+        },
+        {
+            "name": "Docker",
+            "icon": "./assets/img/docker-avatar.png"
+        },
+        {
+            "name": "Java",
+            "icon": "./assets/img/java-avatar.png"
+        },
+        {
+            "name": "Python",
+            "icon": "./assets/img/python-avatar.png"
+        },
+        {
+            "name": "Linux",
+            "icon": "./assets/img/linux-avatar.png"
+        },
+        {
+            "name": "HTML",
+            "icon": "./assets/img/html-avatar.png"
+        },
+        {
+            "name": "CSS/SCSS",
+            "icon": "./assets/img/css-avatar.png"
+        },
+        {
+            "name": "Docker Compose",
+            "icon": "./assets/img/docker-compose-avatar.png"
+        },
+        {
+            "name": "Jenkins",
+            "icon": "./assets/img/jenkins-avatar.png"
+        }
+    ]
+}
