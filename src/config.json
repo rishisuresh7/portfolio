@@ -113,6 +113,7 @@
         "heading": "Some Noteworthy Projects"
     },
     "styles" : {
+        "settingsIcon": true,
         "defaultBackground": "linear-gradient(to right, #000000, #434343)",
         "otherStyles" : [
             {

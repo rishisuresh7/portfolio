@@ -5,7 +5,7 @@ import Settings from '../settings/settings.component.jsx';
 import {initHeader} from './header.actions.jsx';
 import './header.styles.scss';
 
-const Header = ({setShowSettings, showSettings, logo, initHeader}) => {
+const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon}) => {
 
     useEffect(() => {
         initHeader();
@@ -25,7 +25,7 @@ const Header = ({setShowSettings, showSettings, logo, initHeader}) => {
         }
 
         addAnimation();
-    }, []);
+    }, [showIcon]);
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -54,7 +54,11 @@ const Header = ({setShowSettings, showSettings, logo, initHeader}) => {
                     <a className = "header-option" href="experience" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Experience</span></a>
                     <a className = "header-option" href="projects" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Projects</span></a>
                     <a className = "header-option" href="techSkills" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Tech Stack</span></a>
-                    <a className = "header-option icon" onClick={handleSettings} id="animate-header"><i className="fa fa-gear"></i></a>
+                    {
+                        showIcon ?
+                        <a className = "header-option icon" onClick={handleSettings} id="animate-header"><i className="fa fa-gear"></i></a> :
+                        null
+                    }
             </div>
            </div>
             {
@@ -66,7 +70,8 @@ const Header = ({setShowSettings, showSettings, logo, initHeader}) => {
 
 const mapStateToProps = state => ({
     showSettings: state.header.showSettings,
-    logo: state.header.projectLogo
+    logo: state.header.projectLogo,
+    showIcon: state.header.showIcon
 })
 
 const mapDispatchToProps = dispatch => ({
