@@ -5,6 +5,7 @@ import { INIT_PROJECTS } from '../components/projects/projects.types.jsx';
 import { INIT_SETTINGS } from '../components/settings/settings.types.jsx';
 import { INIT_TECH_STACK } from '../components/tech-stack/tech-stack.types.jsx';
 import { INIT_CONNECT } from '../components/connect/connect.types.jsx';
+import { INIT_EXPERIENCE } from '../components/experience/experience.types.js';
 
 export const initialize = (type) => {
     switch(type) {
@@ -20,6 +21,8 @@ export const initialize = (type) => {
             return initTechStack(config.technologies);
         case INIT_CONNECT:
             return initConnect(config.connections);
+        case INIT_EXPERIENCE:
+            return initExperience(config.experience);
     }
 }
 
@@ -119,7 +122,6 @@ const initConnect = (connections) => {
             if (linkType.includes('instagram')) {
                 linkType += ' large'
             }
-            console.log(linkType)
 
             return {
                 id: i++,
@@ -131,5 +133,40 @@ const initConnect = (connections) => {
 
     return {
         connections: newConnections
+    }
+}
+
+const initExperience = (experience) => {
+    let newItems = [];
+    if(experience && experience.length) {
+        newItems = experience.map(({companyName, jobDescription}, index) => {
+            let newResponsibilities = [];
+            if(jobDescription.responsibilities && jobDescription.responsibilities.length) {
+                newResponsibilities = jobDescription.responsibilities.map((item, index) => {
+                    return {
+                        id: index,
+                        text: item.responsibility
+                    }
+                })
+            }
+
+            let newDescription = {
+                role: jobDescription && jobDescription.role ? jobDescription.role : '',
+                period: jobDescription && jobDescription.period ? jobDescription.period : '',
+                responsibilities: newResponsibilities
+            };
+
+            return {
+                id: index + 1,
+                name: companyName ? companyName: '',
+                description: newDescription
+            }
+        })
+    }
+
+    console.log(newItems)
+    return {
+        items: newItems,
+        selectedId: 1
     }
 }
