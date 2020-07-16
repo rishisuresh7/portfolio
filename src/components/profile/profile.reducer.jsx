@@ -1,5 +1,5 @@
 const initState = {
-    name: 'Rishi Suresh',
+    name: 'Rishi Suresh.',
     rotateText: {
         primaryText: 'I build things',
         secondaryText: ['for the web.', 'for the future.']
@@ -15,6 +15,7 @@ const initState = {
             as a REST API developer in Golang.`,
     imageUrl: './assets/img/compressed-removebg.png',
     email: 'rishi9632@gmail.com',
+    signature: 'Developed By Rishi Suresh.'
 
 }
 

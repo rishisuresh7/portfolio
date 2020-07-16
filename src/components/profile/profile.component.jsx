@@ -22,7 +22,7 @@ class Profile extends React.Component {
                     <div className="profile-content-container">
                         <div className="profile-content">
                             <span>Hi, this is </span>
-                            <h1>{name}.</h1>
+                            <h1>{name}</h1>
                             {
                                 animateText ?
                                 <RotateText toRotate={rotateText} time={typeTime} delTime={deleteTime}/> :
