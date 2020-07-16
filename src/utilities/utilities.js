@@ -110,7 +110,6 @@ const initTechStack = (technologies) => {
 
 const initConnect = (connections) => {
     let newConnections = [];
-    console.log(connections)
     let i = 0;
     if (connections && connections.length) {
         newConnections = connections.map(conn => {
@@ -164,7 +163,6 @@ const initExperience = (experience) => {
         })
     }
 
-    console.log(newItems)
     return {
         items: newItems,
         selectedId: 1
