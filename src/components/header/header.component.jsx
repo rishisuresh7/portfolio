@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import './header.styles.scss';
+import {connect} from 'react-redux';
+import {setShowSettings} from './header.actions.jsx';
 import Settings from '../settings/settings.component.jsx';
+import './header.styles.scss';
 
-
-const Header = () => {
-
-    const [showSettings, setShowSettings] = useState(false);
+const Header = ({setShowSettings, showSettings, logo}) => {
 
     useEffect(() => {
         const elements = document.querySelectorAll('#animate-header');
@@ -46,7 +45,7 @@ const Header = () => {
         <div className="header" id="header">
            <div className="header-content">
             <div className="header-logo" id="animate-header">
-                    <span className="header-text">RS</span>
+                    <span className="header-text">{logo}</span>
             </div>
             <div className="header-options">
                     <a className = "header-option" href="profile" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Home</span></a>
@@ -63,4 +62,13 @@ const Header = () => {
     )
 }
 
-export default Header;
+const mapStateToProps = state => ({
+    showSettings: state.header.showSettings,
+    logo: state.header.projectLogo
+})
+
+const mapDispatchToProps = dispatch => ({
+    setShowSettings: (payload) => dispatch(setShowSettings(payload))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

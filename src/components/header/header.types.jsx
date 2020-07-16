@@ -1,0 +1,1 @@
+export const SHOW_SETTINGS = 'SHOW_SETTINGS'
