@@ -58,8 +58,9 @@
         "jobDescription": {
             "role": "WD Intern",
             "period": "Jan 2019 - Feb 2019",
-            "responsibilities": [{
-                "responsibility": "Work on different HTML pages designed for web, cross built for a web application."
+            "responsibilities": [
+                {
+                    "responsibility": "Work on different HTML pages designed for web, cross built for a web application."
                 },
                 {
                     "responsibility": "Design REST API calls to a microservice hosted on AWS to provide authentication on the web-app."
@@ -75,7 +76,8 @@
         "jobDescription": {
             "role": "Summer Trainee",
             "period": "Aug 2017 - Aug 2017",
-            "responsibilities": [{
+            "responsibilities": [
+                {
                     "responsibility": "Build proficiency in different networking tools such as nmap, zenmap, wireshark etc.."
                 },
                 {

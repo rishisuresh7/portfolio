@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
+import {initTechStack} from './tech-stack.actions.jsx';
 import Chip from '../chip/chip.component.jsx';
 import './tech-stack.styles.scss';
 
-const TechStack = ({techStack}) => {
+const TechStack = ({techStack, initTechStack}) => {
 
     const  getRandomIndex = (min, max) => {
         return Math.floor(Math.random() * (max - min)) + min;
@@ -25,6 +26,7 @@ const TechStack = ({techStack}) => {
     }
 
     useEffect(() => {
+        initTechStack();
         const element = document.getElementById('tech-stack');
         document.addEventListener('scroll', () => {
             if ( window.pageYOffset + 500 > element.offsetTop && !element.hasAttribute('animated')) {
@@ -52,4 +54,8 @@ const mapStateToProps = state => ({
     techStack: state.languages.techStack,
 })
 
-export default connect(mapStateToProps)(TechStack);
+const mapDispatchToProps = dispatch => ({
+    initTechStack: () => dispatch(initTechStack())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(TechStack);

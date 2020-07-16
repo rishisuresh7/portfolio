@@ -3,6 +3,7 @@ import { INIT_HEADER } from '../components/header/header.types.jsx';
 import { INIT_PROFILE } from '../components/profile/profile.types';
 import { INIT_PROJECTS } from '../components/projects/projects.types.jsx';
 import { INIT_SETTINGS } from '../components/settings/settings.types.jsx';
+import { INIT_TECH_STACK } from '../components/tech-stack/tech-stack.types.jsx';
 
 export const initialize = (type) => {
     switch(type) {
@@ -14,6 +15,8 @@ export const initialize = (type) => {
             return initProjects(config.projectsInfo);
         case INIT_SETTINGS:
             return initSettings(config.styles);
+        case INIT_TECH_STACK:
+            return initTechStack(config.technologies);
     }
 }
 
@@ -78,5 +81,23 @@ const initSettings = (settings) => {
     return {
         currentBackground: settings && settings.defaultBackground ? settings.defaultBackground : 'linear-gradient(to right, #000000, #434343)',
         styles: allStyles
+    }
+}
+
+const initTechStack = (technologies) => {
+    let newTechStack = [];
+    let i = 0 ;
+    if (technologies && technologies.length) {
+        newTechStack = technologies.map(tech => {
+            return {
+                id: i++,
+                name: tech.name ? tech.name : '',
+                icon: tech.icon ? tech.icon : ''
+            }
+        });
+    }
+
+    return {
+        techStack: newTechStack
     }
 }
