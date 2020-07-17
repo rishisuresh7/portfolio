@@ -111,3 +111,28 @@
         }
     }
 }
+
+@media all and (max-width: 1000px) {
+    .header {
+        height: 5vh;
+        width: 100vw;
+
+        .header-content {
+            width: 100%;
+            height: 100%;
+
+            .header-logo {
+                width: 20%;
+            }
+
+            .header-options {
+                width: 80%;
+
+                .header-option {
+                    width: 25%;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
