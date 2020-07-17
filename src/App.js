@@ -10,9 +10,9 @@ import TechStack from './components/tech-stack/tech-stack.component.jsx';
 import Footer from './components/footer/footer.component.jsx';
 import './App.scss';
 
-const App = ({signature, email}) =>{
+const App = ({signature, email, currentBackground}) =>{
     return (
-        <div className='App' id='app'>
+        <div className='App' id='app' style={{background: currentBackground}}>
             <Header id="header"/>
             <Profile/>
             <Experience/>
@@ -27,7 +27,8 @@ const App = ({signature, email}) =>{
 
 const mapStateToProps = state => ({
     signature: state.user.signature,
-    email: state.user.email
+    email: state.user.email,
+    currentBackground: state.globalStyle.currentBackground,
 })
 
 export default connect(mapStateToProps)(App);

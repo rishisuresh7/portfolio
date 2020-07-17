@@ -18,15 +18,15 @@ const Settings = ({currentBackground, styles, setBackground, initSettings}) => {
     }
 
     const handleClick = (event) => {
-        const elements = ["header", "root", "settings"];
-        setBackground(event.target.getAttribute('style-id'))
-        for(let i = 0; i < elements.length; i++) {
-            document.getElementById(elements[i]).style.background = event.target.getAttribute('style-id');
-        }
+        setBackground(event.target.getAttribute('style-id'));
+    }
+
+    const style = {
+        background: currentBackground,
     }
 
     return (
-        <div className="settings-container" id='settings'>
+        <div className="settings-container" id='settings' style={style}>
             <div className="items">
                 {
                     styles.map(({name, style}, index) =>

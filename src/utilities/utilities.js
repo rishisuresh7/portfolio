@@ -30,7 +30,8 @@ const initHeader = (bio, styles) => {
     return {
         showIcon: styles && styles.settingsIcon ? styles.settingsIcon : false,
         showSettings: false,
-        projectLogo: bio.projectLogo && bio.projectLogo ? bio.projectLogo : ''
+        projectLogo: bio.projectLogo && bio.projectLogo ? bio.projectLogo : '',
+        currentBackground: styles && styles.defaultBackground ? styles.defaultBackground : 'linear-gradient(to right, #000000, #434343)',
     }
 }
 
@@ -85,7 +86,6 @@ const initSettings = (settings) => {
     }
 
     return {
-        currentBackground: settings && settings.defaultBackground ? settings.defaultBackground : 'linear-gradient(to right, #000000, #434343)',
         styles: allStyles
     }
 }

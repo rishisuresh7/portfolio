@@ -5,7 +5,7 @@ import Settings from '../settings/settings.component.jsx';
 import {initHeader} from './header.actions.jsx';
 import './header.styles.scss';
 
-const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon}) => {
+const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, currentBackground}) => {
 
     useEffect(() => {
         initHeader();
@@ -44,7 +44,7 @@ const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon}) => 
     }
 
     return (
-        <div className="header" id="header">
+        <div className="header" id="header" style={{background: currentBackground}}>
            <div className="header-content">
             <div className="header-logo" id="animate-header">
                     <span className="header-text">{logo}</span>
@@ -71,7 +71,8 @@ const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon}) => 
 const mapStateToProps = state => ({
     showSettings: state.header.showSettings,
     logo: state.header.projectLogo,
-    showIcon: state.header.showIcon
+    showIcon: state.header.showIcon,
+    currentBackground: state.globalStyle.currentBackground,
 })
 
 const mapDispatchToProps = dispatch => ({

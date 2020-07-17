@@ -1,7 +1,8 @@
 import { SET_BACKGROUND, INIT_SETTINGS } from './settings.types.jsx'
 
 const initState = {
-    styles: []
+    styles: [],
+    currentBackground: 'linear-gradient(to right, #000000, #434343)',
 }
 
 const setBackgroundReducer = ( state = initState, action) => {
