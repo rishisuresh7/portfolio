@@ -22,7 +22,7 @@ export const initialize = (type) => {
         case INIT_CONNECT:
             return initConnect(config.connections);
         case INIT_EXPERIENCE:
-            return initExperience(config.experience);
+            return initExperience(config.experience, config.experienceHeading);
     }
 }
 
@@ -136,7 +136,7 @@ const initConnect = (connections) => {
     }
 }
 
-const initExperience = (experience) => {
+const initExperience = (experience, heading = 'My Experience at a Glance') => {
     let newItems = [];
     if(experience && experience.length) {
         newItems = experience.map(({companyName, jobDescription}, index) => {
@@ -165,6 +165,7 @@ const initExperience = (experience) => {
     }
 
     return {
+        heading: heading,
         items: newItems,
         selectedId: 1
     }

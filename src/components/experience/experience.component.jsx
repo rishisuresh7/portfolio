@@ -4,7 +4,7 @@ import ExperienceDescription from '../experience-description/experience-descript
 import {setSelectedId, initExperience} from './experience.actions.jsx';
 import './experience.styles.scss';
 
-const Experience = ({initExperience, setSelectedId, experience :{ items, selectedId }}) => {
+const Experience = ({initExperience, setSelectedId, experience :{ items, selectedId, heading }}) => {
     const handleClick = (event) => {
         event.preventDefault();
         setSelectedId(parseInt(event.target.value));
@@ -25,7 +25,7 @@ const Experience = ({initExperience, setSelectedId, experience :{ items, selecte
             <div className="experience" id="experience">
                 <div className="experience-items" id="experience-items">
                     <div className="experience-heading">
-                        <h2>My Experience at a glance</h2>
+                        <h2>{heading}</h2>
                     </div>
                     <div className="experience-container">
                         <div className="experience-titles">
