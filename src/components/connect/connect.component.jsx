@@ -26,8 +26,6 @@ const Connect = ({connections, initConnections}) => {
                     )
                 }
             </div>
-            <div className="connect-line">
-            </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 {
     "bio" : {
         "name": "Rishi Suresh.",
+        "pageTitle": "Rishi Suresh | Software Engineer",
         "rotateText": {
             "primaryText": "I build things",
             "secondaryText": ["for the web.", "for the future."]

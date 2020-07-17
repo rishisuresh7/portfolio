@@ -19,6 +19,7 @@ const Settings = ({currentBackground, styles, setBackground, initSettings}) => {
 
     const handleClick = (event) => {
         setBackground(event.target.getAttribute('style-id'));
+        localStorage.setItem('background', event.target.getAttribute('style-id'));
     }
 
     const style = {

@@ -37,7 +37,8 @@ const initHeader = (bio, styles) => {
 
 const initProfile = (bio) => {
     return {
-        name: bio.name && bio.name ? bio.name : '',
+        title: bio && bio.pageTitle ? bio.pageTitle : '',
+        name: bio && bio.name ? bio.name : '',
         rotateText: {
             primaryText: bio && bio.rotateText && bio.rotateText.primaryText ? bio.rotateText.primaryText: '',
             secondaryText: bio && bio.rotateText && bio.rotateText.secondaryText ? bio.rotateText.secondaryText : []
