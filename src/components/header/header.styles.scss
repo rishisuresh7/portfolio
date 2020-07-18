@@ -154,3 +154,15 @@
         }
     }
 }
+
+@media only screen and (max-width: 1600px) {
+    .header {
+        .header-content {
+            .header-options {
+                .header-option {
+                    width: 17%;
+                }
+            }
+        }
+    }
+}
