@@ -126,6 +126,10 @@
         "defaultBackground": "linear-gradient(to right, #000000, #434343)",
         "otherStyles" : [
             {
+                "name": "MoonLit Asteroid",
+                "style": "linear-gradient(to right, #0f2027, #203a43, #2c5364)"
+            },
+            {
                 "name": "Royal",
                 "style": "linear-gradient(to right, #141e30, #243b55)"
             },
