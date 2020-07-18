@@ -99,3 +99,64 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .project-detail {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        box-shadow: rgba(2, 12, 27, 0.7) 5px 10px 30px -10px;
+
+        .project-detail-title {
+            width: 90%;
+            height: 10%;
+            justify-content: center;
+
+            h2 {
+                font-size: 26px;
+            }
+
+            &.inverted {
+                justify-content: center;
+            }
+        }
+
+        .project-detail-description {
+            width: 90%;
+            margin: 0;
+            height: 60%;
+            background-color: transparent;
+
+            p {
+                font-size: 14px;
+                text-align: center;
+            }
+
+            &.inverted {
+                margin: 0;
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+
+        .project-detail-tech {
+            width: 90%;
+            height: 20%;
+
+            .tech, .links {
+                justify-content: space-evenly;
+
+                a, p {
+                    padding: 0;
+                }
+
+                &.inverted {
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+}

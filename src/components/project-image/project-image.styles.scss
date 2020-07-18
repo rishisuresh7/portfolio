@@ -18,3 +18,9 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .project-image-container {
+        display: none;
+    }
+}
