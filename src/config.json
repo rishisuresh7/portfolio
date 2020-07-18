@@ -4,11 +4,11 @@
         "pageTitle": "Rishi Suresh | Software Engineer",
         "rotateText": {
             "primaryText": "I build things",
-            "secondaryText": ["for the web.", "for the future."]
+            "secondaryText": ["for the Web.", "for the Future.", "for just ANYTHING..."]
         },
         "animateText": true,
         "alternateText": "I build things for the world.",
-        "typeTime": 200,
+        "typeTime": 150,
         "deleteTime": 100,
         "about": "A software engineer based in Bangalore, India. \nI enjoy creating things that live on the internet, whether that be websites, applications, \nor anything in between. My goal is to always build products that provide performant experiences. \nShortly before graduating from Visvesvaraya Technological University, I joined the R&D team at Cast Software where I work \nas a REST API developer in Golang.",
         "imageUrl": "./assets/img/compressed-removebg.png",
