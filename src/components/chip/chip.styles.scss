@@ -31,3 +31,23 @@
         transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .chip {
+        margin: 0 7px 0 9px;
+        height: 40px;
+        max-width: 100x;
+        min-width: 70px;
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        }
+
+        span {
+            font-size: 12px;
+            line-height: 40px;
+        }
+    }
+}
