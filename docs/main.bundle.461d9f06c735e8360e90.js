@@ -370,7 +370,7 @@ object-assign
   \***************************************************************************************************/
 /*! no static exports found */
 /*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t,n){(t=n(/*! ../node_modules/css-loader/dist/runtime/api.js */3)(!1)).push([e.i,"a{text-decoration:none;color:black}*{margin:0;padding:0}body{height:100vh;overflow:scroll;background:black}.App{display:flex;flex-flow:row wrap;height:100%;width:100vw;font-family:'Open Sans';box-sizing:border-box}\n",""]),e.exports=t},
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */function(e,t,n){(t=n(/*! ../node_modules/css-loader/dist/runtime/api.js */3)(!1)).push([e.i,"a{text-decoration:none;color:black}*{margin:0;padding:0}body{height:100vh;overflow-x:hidden;background:black}.App{display:flex;flex-flow:row wrap;height:100%;width:100vw;font-family:'Open Sans';box-sizing:border-box}\n",""]),e.exports=t},
 /*!*****************************************************************!*\
   !*** ./node_modules/react-router/node_modules/isarray/index.js ***!
   \*****************************************************************/
