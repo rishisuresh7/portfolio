@@ -112,9 +112,9 @@
     }
 }
 
-@media all and (max-width: 1000px) {
+@media only screen and (max-width: 400px) {
     .header {
-        height: 5vh;
+        height: 10vh;
         width: 100vw;
 
         .header-content {
@@ -122,15 +122,33 @@
             height: 100%;
 
             .header-logo {
+                height: 100%;
                 width: 20%;
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 85%;
+                    width: 85%;
+                }
             }
 
             .header-options {
                 width: 80%;
 
                 .header-option {
+                    display: flex;
                     width: 25%;
-                    font-size: 25px;
+                    justify-content: center;
+                    font-size: 12px;
+                    text-align: center;
+                    line-break: auto;
+
+                }
+
+                .icon {
+                    display: none;
                 }
             }
         }

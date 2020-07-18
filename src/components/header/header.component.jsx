@@ -53,7 +53,7 @@ const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, curr
                     <a className = "header-option" href="profile" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Home</span></a>
                     <a className = "header-option" href="experience" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Experience</span></a>
                     <a className = "header-option" href="projects" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Projects</span></a>
-                    <a className = "header-option" href="techSkills" onClick={handleClick} id="animate-header"><span>&nbsp;&nbsp;Tech Stack</span></a>
+                    <a className = "header-option" href="techSkills" onClick={handleClick} id="animate-header"><span>Tech Stack</span></a>
                     {
                         showIcon ?
                         <a className = "header-option icon" onClick={handleSettings} id="animate-header"><i className="fa fa-gear"></i></a> :

@@ -21,28 +21,10 @@ h2 {
 
 @media all and (max-width: 1000px) {
     h2 {
-        font-size: 4rem;
-
         span {
-            display: inline;
-            font-size: 4rem !important;
-
-            &:before {
+            &::before {
                 content: '\a';
                 white-space: pre;
-            }
-        }
-
-        .animate-cursor {
-            display: inline-block;
-            width: 50px;
-            border-bottom: 2px solid white;
-            animation: blinker 400ms linear infinite;
-
-            @keyframes blinker {
-                50% {
-                  opacity: 0;
-                }
             }
         }
     }
