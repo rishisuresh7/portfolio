@@ -5,6 +5,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Sans';
 
     .experience-items {
         width: 70%;
@@ -67,9 +68,9 @@
                     flex-direction: column;
 
                     .experience-title {
+                        font-family: inherit;
                         height: 25%;
                         width: 100%;
-                        font-family: 'Open Sans';
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -77,6 +78,7 @@
                         background: transparent;
                         border: none;
                         color: white;
+                        border: 3px solid transparent;
                         transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 
                         &:focus {
@@ -112,6 +114,70 @@
                     width: 80%;
                     margin: 10%;
                     color: white;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .experience {
+        margin-top: 5%;
+
+        .experience-items {
+            width: 100%;
+            height: 100%;
+
+            .experience-heading {
+                height: 10%;
+                align-items: center;
+
+                h2  {
+                    padding-left: 0;
+                    width: 100%;
+                    font-size: 28px;
+                    display: initial;
+                    text-align: center;
+
+                    &::after  {
+                        display: none;
+                    }
+                }
+            }
+
+            .experience-container {
+                height: 90%;
+                flex-direction: column;
+
+                .experience-titles {
+                    width: 100%;
+                    height: 10%;
+
+                    .experience-titles-container {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+
+                        .experience-title {
+                            width: 33%;
+                            height: 100%;
+                        }
+                    }
+                }
+
+                .experience-descriptions {
+                    width: 100%;
+                    height: 70%;
+                    margin-top: 5%;
+
+                    .experience-description-container {
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+                    }
                 }
             }
         }
