@@ -24,3 +24,16 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        height: 4vh;
+
+        a {
+            span {
+                color: azure;
+                font-size: 10px;
+            }
+        }
+    }
+}

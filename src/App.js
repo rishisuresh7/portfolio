@@ -29,9 +29,9 @@ const App = ({signature, email, currentBackground, resetShowSettings, showSettin
                 <Profile/>
                 <Experience/>
                 <Projects/>
-                <Connect/>
-                <Mail email={email}/>
                 <TechStack/>
+                <Mail email={email}/>
+                <Connect/>
                 <Footer name={signature}/>
             </div>
         </React.Fragment>

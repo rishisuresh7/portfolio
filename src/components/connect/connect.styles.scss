@@ -59,15 +59,28 @@
 @media only screen and (max-width: 400px) {
     .connect-component {
         width: 100%;
-        height: 10vh;
+        height: 5vh;
+        margin-top: 5vh;
         position: relative;
-        bottom: 0;
+        opacity: 1;
 
         .connect-container {
             width: 100%;
             height: 100%;
             flex-direction: row;
             justify-content: space-around;
+
+            .connect-item {
+
+                a, i {
+                    color: grey;
+                    font-size: 20px;
+
+                    &.large {
+                        font-size: 22px;
+                    }
+                }
+            }
         }
     }
 }
