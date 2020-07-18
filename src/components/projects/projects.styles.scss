@@ -39,6 +39,14 @@
     }
 }
 
+@media only screen and (max-width: 1600px) {
+    .projects {
+        .projects-title {
+            width: 70%;
+        }
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .projects {
         .projects-title {
@@ -52,14 +60,6 @@
                     display: none;
                 }
             }
-        }
-    }
-}
-
-@media only screen and (max-width: 1600px) {
-    .projects {
-        .projects-title {
-            width: 70%;
         }
     }
 }
