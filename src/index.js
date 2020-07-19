@@ -4,6 +4,7 @@ import store from './redux/store.jsx';
 import React from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import App from './App.js';
+import register from './registerServiceWorker.js';
 
 ReactDom.render(
     <Provider store= {store}>
@@ -13,3 +14,5 @@ ReactDom.render(
     </Provider>,
     document.getElementById('root')
 );
+
+register();

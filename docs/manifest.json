@@ -1,0 +1,25 @@
+{
+    "short_name": "Rishi Suresh",
+    "name": "Rishi Suresh's Portfolio",
+    "icons": [
+      {
+        "src": "assets/icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/android-chrome-256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/icons/favicon-32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000"
+  }
