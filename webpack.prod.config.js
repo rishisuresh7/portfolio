@@ -43,6 +43,11 @@ module.exports = {
                 {
                     from: './src/assets/img',
                     to: './assets/img',
+                    globOptions: {
+                        ignore: [
+                            '**/.DS_Store',
+                        ]
+                    }
                 },
                 {
                     from: './src/manifest.json',
@@ -51,12 +56,22 @@ module.exports = {
                 {
                     from: './src/assets/icons',
                     to: './assets/icons',
+                    globOptions: {
+                        ignore: [
+                            '**/.DS_Store',
+                        ]
+                    }
                 },
             ]
         }),
         new WorkboxPlugin.GenerateSW({
             clientsClaim: true,
             skipWaiting: true,
+            exclude: [/.DS_Store/],
+            runtimeCaching: [{
+                urlPattern: new RegExp('https://rishisuresh7.github.io/portfolio'),
+                handler: 'StaleWhileRevalidate'
+              }]
         }),
     ],
     output: {
