@@ -98,6 +98,13 @@
     }],
     "projectsInfo": {
         "projects": [{
+            "name": "Git Overview",
+            "image": "./assets/img/overview.png",
+            "description": "Built a fun project to collect and display the stats of users in github, in the form of charts using Chart.js and React.\nUses Chart.js as a re-usable react component with configurable chart type, styles and animations throughout.",
+            "languages": ["React", "Redux", "Redux-Saga", "Chart.js", "Github API"],
+            "repoLink": "https://github.com/rishisuresh7/overview",
+            "projectLink": "https://rishisuresh7.github.io/overview"
+        },{
             "name": "Reuse Store - Back End",
             "image": "./assets/img/reuse_store_backend.png",
             "description": "A Golang based  REST API mux server used as the backend service for Resue Store - Front End project.\nImplements JWT tokens for login and authentication, API security is provided using secret key mechanism. Uses MONGO\nas backend database to save store details",
