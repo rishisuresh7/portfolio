@@ -20,8 +20,8 @@ const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime,
             <div className="profile-items" id="profile-items">
                 <div className="profile-content-container">
                     <div className="profile-content">
-                        <span>Hi, this is </span>
-                        <h1>{name}</h1>
+                        <span>Hi &#9995;, this is </span>
+                        <h1>{name}.</h1>
                         {
                             animateText ?
                             <RotateText toRotate={rotateText} time={typeTime} delTime={deleteTime}/> :
@@ -39,8 +39,12 @@ const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime,
                         </div>
                     </div>
                 </div>
-                <div className="get-in-touch-container">
+                {/* <div className="get-in-touch-container">
                     <a href={`mailto:${email}`} className="get-in-touch">Get In Touch</a>
+                </div> */}
+                <div className="profile-stats-container">
+                    <img className = 'profile-stats-summary' src = 'https://github-readme-stats.vercel.app/api?username=rishisuresh7&hide_title=true&count_private=true&show_icons=true&hide_border=true&bg_color=ffffff00&text_color=008b8b&icon_color=008b8b' />
+                    <img className = 'profile-stats-languages' src='https://github-readme-stats.vercel.app/api/top-langs/?username=rishisuresh7&hide=php,c%2b%2b&hide_title=true&hide_border=true&bg_color=ffffff00&text_color=008b8b' />
                 </div>
             </div>
         </div>
