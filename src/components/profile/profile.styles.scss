@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     height: 90vh;
+    top: 10vh;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
@@ -10,7 +11,7 @@
     font-family: 'Open Sans';
 
     .profile-items{
-        height: 70%;
+        height: 90%;
         width: 70%;
         display: flex;
         flex-wrap: wrap;
@@ -19,7 +20,7 @@
 
         &.profile-items-fadein {
             opacity: 1;
-            margin-top: 0;
+            margin-top: -5%;
             transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95) 0.80s;
         }
 
@@ -49,6 +50,7 @@
 
         .profile-content-container {
             width: 60%;
+            height: 75%;
 
             .profile-content {
                 display: flex;
@@ -68,6 +70,7 @@
 
                 h2 {
                     font-size: 36px;
+                    color: #008b8b;
                 }
 
                 .alternate-text {
@@ -76,24 +79,26 @@
 
                 span {
                     font-size: 18px;
+                    opacity: 0.8;
                 }
 
                 p {
                     padding-top: 20px;
                     font-size: 16px;
+                    opacity: 0.8;
                 }
             }
         }
 
         .profile-image-container {
             width: 40%;
-            height: 100%;
+            height: 75%;
             display: flex;
             justify-content: center;
             align-items: center;
 
             .profile-image-border {
-                border: 2px solid white;
+                border: 2px solid #7d1855;
                 border-radius: 50%;
                 width: 250px;
                 height: 250px;
@@ -111,6 +116,21 @@
                         transform-origin: -10% 0%;
                     }
                 }
+            }
+        }
+
+        .profile-stats-container {
+            width: 100%;
+            height: 25%;
+            position: relative;
+            top: -5%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: baseline;
+
+            img {
+                height: 180px;
+                max-height: 180px;
             }
         }
     }

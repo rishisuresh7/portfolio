@@ -19,13 +19,12 @@
         width: 100%;
         height: 40%;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: center;
         margin-bottom: 15%;
 
         a {
             text-decoration: none;
+            opacity: 0.8;
             color: azure;
             writing-mode: vertical-lr;
             letter-spacing: 4px;
@@ -49,6 +48,7 @@
 
         .mail-line {
             height: 100%;
+            opacity: 0.8;
             width: 1px;
             background-color: azure;
         }
