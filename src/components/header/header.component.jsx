@@ -29,7 +29,7 @@ const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, curr
 
     const handleClick = (event) => {
         event.preventDefault();
-        const target = event.target;
+        const target = event.target.closest('.header-option');
         const scrollTo = document.getElementById(target.getAttribute('href'));
         window.scrollTo({
             top: scrollTo.offsetTop,
@@ -50,10 +50,10 @@ const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, curr
                     <span className="header-text">{logo}</span>
             </div>
             <div className="header-options">
-                    <a className = "header-option" href="profile" onClick={handleClick} id="animate-header"><span><i className='fas fa-home'/>&nbsp;Home</span></a>
-                    <a className = "header-option" href="experience" onClick={handleClick} id="animate-header"><span><i className='fas fa-laptop' />&nbsp;Experience</span></a>
-                    <a className = "header-option" href="projects" onClick={handleClick} id="animate-header"><span><i class="fas fa-tasks"/>&nbsp;Projects</span></a>
-                    <a className = "header-option" href="techSkills" onClick={handleClick} id="animate-header"><span><i class="fab fa-node-js"/>&nbsp;Tech Stack</span></a>
+                    <a className = "header-option" href="profile" onClick={handleClick} id="animate-header"><span><i className='fas fa-home'/><span>&nbsp;Home</span></span></a>
+                    <a className = "header-option" href="experience" onClick={handleClick} id="animate-header"><span><i className='fas fa-laptop' /><span>&nbsp;Experience</span></span></a>
+                    <a className = "header-option" href="projects" onClick={handleClick} id="animate-header"><span><i class="fas fa-tasks"/><span>&nbsp;Projects</span></span></a>
+                    <a className = "header-option" href="techSkills" onClick={handleClick} id="animate-header"><span><i class="fab fa-node-js"/><span>&nbsp;Tech Stack</span></span></a>
                     {
                         showIcon ?
                         <a className = "header-option icon" onClick={handleSettings} id="animate-header"><i className="fa fa-gear"></i></a> :

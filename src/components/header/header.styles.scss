@@ -172,10 +172,15 @@
                     display: flex;
                     width: 25%;
                     justify-content: center;
-                    font-size: 12px;
+                    font-size: 20px;
                     text-align: center;
                     line-break: auto;
 
+                    span {
+                        span {
+                            display: none;
+                        }
+                    }
                 }
 
                 .icon {
