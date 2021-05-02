@@ -36,7 +36,8 @@ const CustomCard = ({ content: {title = '', period= '', description= '', technol
       paddingTop: '56.25%',
     },
     description: {
-      color: 'white',
+      color: 'darkturquoise',
+      textAlign: 'justify',
     },
     subHeader : {
         color: 'white',
