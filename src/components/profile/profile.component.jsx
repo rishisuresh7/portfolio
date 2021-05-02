@@ -44,7 +44,6 @@ const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime,
                 </div> */}
                 <div className="profile-stats-container">
                     <img className = 'profile-stats-summary' src = 'https://github-readme-stats.vercel.app/api?username=rishisuresh7&hide_title=true&count_private=true&show_icons=true&hide_border=true&bg_color=ffffff00&text_color=008b8b&icon_color=008b8b' />
-                    <img className = 'profile-stats-languages' src='https://github-readme-stats.vercel.app/api/top-langs/?username=rishisuresh7&hide=php,c%2b%2b&hide_title=true&hide_border=true&bg_color=ffffff00&text_color=008b8b' />
                 </div>
             </div>
         </div>

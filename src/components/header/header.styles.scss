@@ -24,11 +24,11 @@
             justify-content: flex-start;
             align-items: center;
             opacity: 0;
-    
+
             span {
                 pointer-events: none;
-                border: 2px solid #443737;
-                color: #b19d9d;;
+                border: 2px solid darkturquoise;
+                color: darkturquoise;
                 height: 60px;
                 width: 60px;
                 font-size: 30px;
@@ -39,7 +39,7 @@
             }
 
             &.fadein {
-                opacity: 1;
+                opacity: 0.8;
                 transition: opacity 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
             }
         }
@@ -51,12 +51,12 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-    
+
             .header-option {
                 font-size: 18px;
                 height: 100%;
                 width: 12%;
-                color: #b19ca1;
+                color: darkturquoise;
                 letter-spacing: 1px;
                 display: flex;
                 justify-content: center;
@@ -69,7 +69,6 @@
                     cursor: pointer;
                     font-weight: bold;
 
-
                     .fab, .fa-tasks {
                         font-weight: bold;
                         font-size: 20px;
@@ -77,26 +76,13 @@
                 }
 
                 &.fadein {
-
-                    &:first-child {
-                        opacity: 0.7;
-                    }
-
-                    &:nth-child(2) {
-                        opacity: 0.8;
-                    }
-
-                    &:nth-child(3) {
-                        opacity: 0.9;
-                    }
-
                     span {
                         top: 50%;
                         transform: translateY(-50%);
                         transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
                     }
 
-                    opacity: 1;
+                    opacity: 0.8;
                     transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
                 }
 
@@ -122,7 +108,7 @@
                             transition: all 1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
                         }
 
-                        opacity: 1;
+                        opacity: 0.8;
                         transition: all 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
                     }
                 }
