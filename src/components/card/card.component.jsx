@@ -10,8 +10,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 
-
-const CustomCard = ({ content: {title = '', period= '', description= '', technologies=[], color, html_url, image, left, selected, index}}) => {
+const CustomCard = ({ content: {title = '', period= '', description= '', technologies=[], repoLink, deploymentLink, image, left, selected, index}}) => {
   const classes = makeStyles(() => ({
     root: {
       maxWidth: 400,
@@ -32,7 +31,7 @@ const CustomCard = ({ content: {title = '', period= '', description= '', technol
     },
     media: {
       height: 0,
-      color: 'cyan',
+      color: 'azure',
       paddingTop: '56.25%',
     },
     description: {
@@ -40,28 +39,40 @@ const CustomCard = ({ content: {title = '', period= '', description= '', technol
       textAlign: 'justify',
     },
     subHeader : {
-        color: 'white',
+        color: '#5cb3b3',
     },
     avatar: {
-      backgroundColor: 'red',
+      backgroundColor: '#534d58',
     },
   }))();
 
   return (
     <Card className={classes.root}>
-      <CardHeader className = {classes.subHeader}
+      <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
             {title[0] && title[0].toUpperCase()}
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <i className="fa fa-github" aria-hidden="true"></i>
-          </IconButton>
+          <React.Fragment>
+            {
+              deploymentLink === '' ? null :
+                <IconButton aria-label="settings">
+                <a style={{color: 'white', fontSize: 18}} href={deploymentLink} target='_blank' rel='noreferrer'>
+                  <i className="fas fa-external-link-alt" aria-hidden="true" />
+                </a>
+                </IconButton>
+            }
+            <IconButton aria-label="settings">
+              <a style={{color: 'white'}} href={repoLink} target='_blank' rel='noreferrer'>
+                <i className="fa fa-github" aria-hidden="true" />
+              </a>
+            </IconButton>
+          </React.Fragment>
         }
         title={title}
-        subheader={period}
+        subheader={<span className = {classes.subHeader}>{period}</span>}
       />
       <CardMedia
         className={classes.media}
@@ -77,7 +88,7 @@ const CustomCard = ({ content: {title = '', period= '', description= '', technol
         {
             technologies.map((item, i) => 
                 (<Button key={i} size="small" color="primary">
-                   {item}
+                   <span className={classes.subHeader}>{item}</span>
                 </Button>))
         }
       </CardActions>

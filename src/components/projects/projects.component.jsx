@@ -69,11 +69,13 @@ class Projects extends React.Component {
                             return <CustomCard
                             key = {key}
                             content = {{
-                                title: item.name,
-                                period: item.name,
+                                title: item.name.toUpperCase(),
+                                period: item.period,
                                 description: item.description,
                                 image: item.image,
                                 technologies: item.languages,
+                                repoLink: item.repoLink,
+                                deploymentLink: item.projectLink,
                                 selected: key === this.state.selected,
                                 left,
                                 index
