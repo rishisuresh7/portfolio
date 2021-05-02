@@ -43,7 +43,7 @@ const TechStack = ({techStack, initTechStack}) => {
                 <Chip
                     key = {id}
                     name = {name}
-                    icon = {icon}
+                    iconUrl = {icon}
                 />)
             }
         </div>

@@ -1,11 +1,16 @@
 import React from 'react';
 import './chip.styles.scss';
 
-const Chip = ({icon, name}) => {
+const Chip = ({iconUrl, name, iconClass, onClick, styles}) => {
     return(
-        <div className="chip">
-            <img src={icon} alt="icon"/>
-            <span>{name}</span>
+        <div onClick = {onClick} style={styles}  className={`chip ${iconClass ? 'carousel': ''}`}>
+            {iconClass ?
+                <i className = {iconClass} ></i> :
+                <React.Fragment>
+                    <img src={iconUrl} alt="icon"/>
+                    <span>{name}</span>
+                </React.Fragment>
+            }
         </div>
     ) 
 }
