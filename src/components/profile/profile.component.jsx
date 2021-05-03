@@ -15,6 +15,7 @@ const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime,
         animateElement.classList.add('profile-items-fadein');
     }
 
+    const url = 'https://github-readme-stats.vercel.app/api?username=rishisuresh7&hide_title=true&count_private=true&show_icons=true&hide_border=true&bg_color=ffffff00&text_color=008b8b&icon_color=008b8b&cache_seconds=1800'
     return (
         <div className="profile" id="profile">
             <div className="profile-items" id="profile-items">
@@ -43,7 +44,7 @@ const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime,
                     <a href={`mailto:${email}`} className="get-in-touch">Get In Touch</a>
                 </div> */}
                 <div className="profile-stats-container">
-                    <img className = 'profile-stats-summary' src = 'https://github-readme-stats.vercel.app/api?username=rishisuresh7&hide_title=true&count_private=true&show_icons=true&hide_border=true&bg_color=ffffff00&text_color=008b8b&icon_color=008b8b' />
+                    <img className = 'profile-stats-summary' src = {url} />
                 </div>
             </div>
         </div>
