@@ -9,6 +9,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
+import './card.styles.scss';
 
 const CustomCard = ({ content: {title = '', period= '', description= '', technologies=[], repoLink, deploymentLink, image, left, selected, index}}) => {
   const classes = makeStyles(() => ({

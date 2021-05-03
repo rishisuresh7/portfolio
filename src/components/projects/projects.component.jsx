@@ -52,7 +52,7 @@ class Projects extends React.Component {
                     <h2>{this.props.projectsHeading}</h2>
                 </div>
                 <div className="projects-carousel">
-                    <div className="projects-carousel-button">
+                    <div className="projects-carousel-button projects-carousel-left-button">
                         <Chip
                             iconClass= 'fa fa-angle-left'
                             onClick = {() => this.handleClick('left')}
@@ -84,7 +84,7 @@ class Projects extends React.Component {
                         })
                     }
                     </div>
-                    <div className="projects-carousel-button">
+                    <div className="projects-carousel-button projects-carousel-right-button">
                         <Chip
                             iconClass= 'fa fa-angle-right'
                             onClick = {() => this.handleClick('right')}

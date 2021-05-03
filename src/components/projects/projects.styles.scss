@@ -74,16 +74,46 @@
 
 @media only screen and (max-width: 600px) {
     .projects {
+        margin-bottom: 15%;
+        height: 100vh;
+
         .projects-title {
             width: 100%;
+            margin-top: 0;
 
             h2 {
-                font-size: 28px;
+                font-size: 24px;
                 justify-content: center;
 
                 &::after {
                     display: none;
                 }
+            }
+        }
+
+        .projects-carousel {
+            width: 100%;
+            flex-wrap: wrap;
+            position: relative;
+
+            .projects-carousel-button {
+                width: 50%;
+                height: 10%;
+                position: absolute;
+                bottom: 0;
+
+                &.projects-carousel-left-button {
+                    left: 0;
+                }
+
+                &.projects-carousel-right-button {
+                    right: 0;
+                }
+            }
+
+            .projects-carousel-cards {
+                height: 90%;
+                width: 100%;
             }
         }
     }

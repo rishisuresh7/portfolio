@@ -21,7 +21,11 @@ h2 {
 
 @media all and (max-width: 1000px) {
     h2 {
+        font-size: 25px !important;
+
         span {
+            font-size: 25px !important;
+
             &::before {
                 content: '\a';
                 white-space: pre;

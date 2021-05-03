@@ -67,7 +67,7 @@ const Experience = ({initExperience, experience}) => {
                     </p>
                 </div>
                 <div className="experience-option">
-                    <h4><i className="fas fa-code"></i> FrontEnd Software Development</h4>
+                    <h4><i className="fas fa-code"></i> FrontEnd Development</h4>
                     <h5>@ CAST Software India Pvt. Ltd.</h5>
                     <p>
                         Developed a few websites to incorporate new frameworks and technologies into the tech stack. In the constant process of learing,
