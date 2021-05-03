@@ -22,7 +22,7 @@ const Experience = ({initExperience, experience}) => {
             </div>
             <div className="experience-options">
                 <div className="experience-option">
-                    <h4><i className="fas fa-terminal"></i> BackEnd Software Development</h4>
+                    <h4><i className="fas fa-terminal"></i> BackEnd Development</h4>
                     <h5>@ CAST Software India Pvt. Ltd.</h5>
                     <p>
                         Develop scalable and independent microservices based on a multi tenant design. Work with a variety of different languages,

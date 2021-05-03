@@ -77,6 +77,16 @@
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    .experience-container {
+        .experience-options {
+            .experience-option {
+                height: 35%;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .experience-container {
         height: auto;

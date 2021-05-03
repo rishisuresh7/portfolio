@@ -87,7 +87,7 @@ const CustomCard = ({ content: {title = '', period= '', description= '', technol
       </CardContent>
       <CardActions disableSpacing>
         {
-            technologies.map((item, i) => 
+            technologies.map((item, i) => i > 2 ? null :
                 (<Button key={i} size="small" color="primary">
                    <span className={classes.subHeader}>{item}</span>
                 </Button>))

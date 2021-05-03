@@ -2,10 +2,21 @@
     .MuiPaper-root {
         min-width: 200px !important;
         width: 240px !important;
+        height: 460px !important;
+
+        .MuiTypography-root {
+            font-size: 12px !important;
+        }
 
         .MuiCardHeader-content {
             span {
-                font-size: 13px !important;
+                font-size: 12px !important;
+            }
+        }
+
+        .MuiButtonBase-root {
+            span {
+                font-size: 12px !important;
             }
         }
 
