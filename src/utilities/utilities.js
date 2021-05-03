@@ -61,6 +61,7 @@ const initProjects = (projects) => {
             return {
                 name: project.name ? project.name : '',
                 image: project.image ? project.image : '',
+                period: project.subTitle ? project.subTitle: '',
                 description: project.description ? project.description : '',
                 languages: project.languages ? project.languages : [],
                 repoLink: project.repoLink ? project.repoLink : '',

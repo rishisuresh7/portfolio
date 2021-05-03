@@ -86,6 +86,7 @@
                     padding-top: 20px;
                     font-size: 16px;
                     opacity: 0.8;
+                    text-align: justify;
                 }
             }
         }
@@ -98,7 +99,7 @@
             align-items: center;
 
             .profile-image-border {
-                border: 2px solid #7d1855;
+                border: 2px solid darkcyan;
                 border-radius: 50%;
                 width: 250px;
                 height: 250px;

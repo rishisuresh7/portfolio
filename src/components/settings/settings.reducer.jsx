@@ -2,7 +2,7 @@ import { SET_BACKGROUND, INIT_SETTINGS } from './settings.types.jsx'
 
 const initState = {
     styles: [],
-    currentBackground: localStorage.getItem('background') ? localStorage.getItem('background') : 'linear-gradient(to right, #000000, #434343)',
+    currentBackground: localStorage.getItem('background') ? localStorage.getItem('background') : 'black',
 }
 
 const setBackgroundReducer = ( state = initState, action) => {
