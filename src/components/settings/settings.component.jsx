@@ -53,7 +53,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
     setBackground: (background) => dispatch(setBackground(background)),
-    initSettings: () => dispatch(initSettings())
+    initSettings: (payload) => dispatch(initSettings(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Settings);

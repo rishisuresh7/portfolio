@@ -4,10 +4,10 @@ import RotateText from '../rotate-text/rotate.component.jsx';
 import {initProfile} from './profile.actions.jsx';
 import './profile.styles.scss';
 
-const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime, deleteTime, about, imageUrl, email}, initializeProfile}) => {
+const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime, deleteTime, about, imageUrl}, global, initializeProfile}) => {
 
     useEffect(() => {
-        initializeProfile();
+        initializeProfile(global);
     }, [])
 
     const handleLoad = () => {
@@ -52,11 +52,12 @@ const Profile = ({user: {name, animateText, alternateText, rotateText, typeTime,
 }
 
 const mapStateToProps = state => ({
-    user: state.user
+    user: state.user,
+    global: state.global,
 })
 
 const mapDispatchToProps = dispatch => ({
-    initializeProfile: () => dispatch(initProfile())
+    initializeProfile: (payload) => dispatch(initProfile(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Profile);

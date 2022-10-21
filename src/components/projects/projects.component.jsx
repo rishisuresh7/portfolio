@@ -16,7 +16,7 @@ class Projects extends React.Component {
     }
 
     componentDidMount() {
-        this.props.initializeProjects();
+        this.props.initializeProjects(this.props.global);
         document.addEventListener('scroll', () => {
             const el = document.getElementById('projects');
             if ( window.pageYOffset + 400 > el.offsetTop && !el.hasAttribute('animated')) {
@@ -101,11 +101,12 @@ class Projects extends React.Component {
 
 const mapStateToProps = state => ({
     projects: state.project.projects,
-    projectsHeading: state.project.heading
+    projectsHeading: state.project.heading,
+    global: state.global,
 })
 
 const mapDispatchToProps = dispatch => ({
-    initializeProjects: () => dispatch(initProjects())
+    initializeProjects: (payload) => dispatch(initProjects(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Projects);

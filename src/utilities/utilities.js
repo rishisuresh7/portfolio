@@ -1,4 +1,3 @@
-import config from '../config.json';
 import { INIT_HEADER } from '../components/header/header.types.jsx';
 import { INIT_PROFILE } from '../components/profile/profile.types';
 import { INIT_PROJECTS } from '../components/projects/projects.types.jsx';
@@ -7,7 +6,7 @@ import { INIT_TECH_STACK } from '../components/tech-stack/tech-stack.types.jsx';
 import { INIT_CONNECT } from '../components/connect/connect.types.jsx';
 import { INIT_EXPERIENCE } from '../components/experience/experience.types.js';
 
-export const initialize = (type) => {
+export const initialize = (type, config = {}) => {
     switch(type) {
         case INIT_HEADER:
             return initHeader(config.bio, config.styles);

@@ -8,9 +8,9 @@ export const setShowSettings = payload => {
     }
 }
 
-export const initHeader = () => {
+export const initHeader = (data) => {
     return {
         type: INIT_HEADER,
-        payload: utility.initialize(INIT_HEADER)
+        payload: utility.initialize(INIT_HEADER, data)
     }
 }

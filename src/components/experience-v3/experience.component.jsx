@@ -13,7 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { initExperience } from '../experience/experience.actions.jsx';
 import './experience.styles.scss';
 
-const Experience = ({ initExperience, experience }) => {
+const Experience = ({ initExperience, experience, global }) => {
     const classes = makeStyles(() => ({
         root: {
             width: 'auto',
@@ -45,7 +45,7 @@ const Experience = ({ initExperience, experience }) => {
     };
 
     useEffect(() => {
-        initExperience();
+        initExperience(global);
         document.addEventListener('scroll', () => {
             const experienceDiv = document.getElementById('experience');
             if ((window.pageYOffset > experienceDiv.offsetTop / 2) && !experienceDiv.classList.contains('fadein')) {
@@ -110,10 +110,11 @@ const Experience = ({ initExperience, experience }) => {
 
 const mapStateToProps = state => ({
     experience: state.experience,
+    global: state.global,
 })
 
 const mapDispatchToProps = dispatch => ({
-    initExperience: () => dispatch(initExperience())
+    initExperience: (payload) => dispatch(initExperience(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Experience);

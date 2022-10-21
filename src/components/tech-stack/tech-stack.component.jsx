@@ -4,7 +4,7 @@ import {initTechStack} from './tech-stack.actions.jsx';
 import Chip from '../chip/chip.component.jsx';
 import './tech-stack.styles.scss';
 
-const TechStack = ({techStack, initTechStack}) => {
+const TechStack = ({techStack, initTechStack, global}) => {
 
     const  getRandomIndex = (min, max) => {
         return Math.floor(Math.random() * (max - min)) + min;
@@ -26,7 +26,7 @@ const TechStack = ({techStack, initTechStack}) => {
     }
 
     useEffect(() => {
-        initTechStack();
+        initTechStack(global);
         const element = document.getElementById('tech-stack');
         document.addEventListener('scroll', () => {
             if ( window.pageYOffset + 500 > element.offsetTop && !element.hasAttribute('animated')) {
@@ -52,10 +52,11 @@ const TechStack = ({techStack, initTechStack}) => {
 
 const mapStateToProps = state => ({
     techStack: state.languages.techStack,
+    global: state.global,
 })
 
 const mapDispatchToProps = dispatch => ({
-    initTechStack: () => dispatch(initTechStack())
+    initTechStack: (payload) => dispatch(initTechStack(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TechStack);
