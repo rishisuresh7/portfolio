@@ -5,10 +5,10 @@ import Settings from '../settings/settings.component.jsx';
 import {initHeader} from './header.actions.jsx';
 import './header.styles.scss';
 
-const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, currentBackground}) => {
+const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, global}) => {
 
     useEffect(() => {
-        initHeader();
+        initHeader(global);
         const elements = document.querySelectorAll('#animate-header');
         let t = 20;
         const addAnimation = (i = 0) => {
@@ -44,7 +44,7 @@ const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, curr
     }
 
     return (
-        <div className="header" id="header" style={{background: currentBackground}}>
+        <div className="header" id="header" >
            <div className="header-content">
             <div className="header-logo" id="animate-header">
                     <span className="header-text">{logo}</span>
@@ -73,11 +73,12 @@ const mapStateToProps = state => ({
     logo: state.header.projectLogo,
     showIcon: state.header.showIcon,
     currentBackground: state.globalStyle.currentBackground,
+    global: state.global,
 })
 
 const mapDispatchToProps = dispatch => ({
     setShowSettings: (payload) => dispatch(setShowSettings(payload)),
-    initHeader: () => dispatch(initHeader())
+    initHeader: (payload) => dispatch(initHeader(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

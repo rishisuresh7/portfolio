@@ -1,40 +1,64 @@
-import React from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import Helmet from 'react-helmet';
-import {connect} from 'react-redux';
+import Loading from "react-fullscreen-loading";
+import { connect } from 'react-redux';
 import Header from './components/header/header.component.jsx';
 import Profile from './components/profile/profile.component.jsx';
-import Experience from './components/experience-v2/experience.component.jsx';
+import Experience from './components/experience-v3/experience.component.jsx';
 import Projects from './components/projects/projects.component.jsx';
 import Connect from './components/connect/connect.component.jsx';
 import Mail from './components/mail/mail.component.jsx';
 import TechStack from './components/tech-stack/tech-stack.component.jsx';
 import Footer from './components/footer/footer.component.jsx';
-import {setShowSettings} from './components/header/header.actions.jsx';
+import { setShowSettings } from './components/header/header.actions.jsx';
+import { setData } from './App.actions';
 import './App.scss';
 
-const App = ({signature, email, currentBackground, resetShowSettings, showSettings, title, icon}) =>{
+const App = ({ url, signature, email, setGlobalData, resetShowSettings, showSettings, title, icon }) => {
+    const [loading, setLoading] = useState(true);
 
+    useEffect(() => {
+        fetch(url)
+            .then(r => r.json())
+            .then(resp => {
+                setGlobalData(resp);
+                setTimeout(() => {
+                    setLoading(false);
+                }, 2000)
+            })
+            .catch(e => {
+                console.log(e)
+            })
+    }, [])
+
+    const background = "linear-gradient(to right, #0f2027, #203a43, #2c5364)";
     const handleClick = () => {
-        if(showSettings)
+        if (showSettings)
             resetShowSettings(false);
     }
 
     return (
-        <React.Fragment>
-            <Helmet>
-                    <title>{title}</title>
-            </Helmet>
-            <div className='App' id='app' style={{background: currentBackground}} onClick={handleClick}>
-                <Header id="header"/>
-                <Profile/>
-                <Experience/>
-                <Projects/>
-                <TechStack/>
-                <Mail email={email}/>
-                <Connect/>
-                <Footer name={signature}/>
-            </div>
-        </React.Fragment>
+        <Fragment>
+            {
+                loading ?
+                    <Loading loading={loading} background={background} loaderColor="#3498db" /> :
+                    <Fragment>
+                        <Helmet>
+                            <title>{title}</title>
+                        </Helmet>
+                        <div className='App' id='app' style={{ background}} onClick={handleClick}>
+                            <Header id="header" />
+                            <Profile />
+                            <Experience />
+                            <Projects />
+                            <TechStack />
+                            <Mail email={email} />
+                            <Connect />
+                            <Footer name={signature} />
+                        </div>
+                    </Fragment>
+            }
+        </Fragment>
     )
 }
 
@@ -48,7 +72,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    resetShowSettings: (payload) => dispatch(setShowSettings(payload))
+    resetShowSettings: (payload) => dispatch(setShowSettings(payload)),
+    setGlobalData: (payload) => dispatch(setData(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

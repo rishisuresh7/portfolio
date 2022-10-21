@@ -8,9 +8,9 @@ export const setBackground = (payload) => {
     }
 }
 
-export const initSettings = () => {
+export const initSettings = (payload) => {
     return {
         type: INIT_SETTINGS,
-        payload: utilities.initialize(INIT_SETTINGS)
+        payload: utilities.initialize(INIT_SETTINGS, payload)
     }
 }

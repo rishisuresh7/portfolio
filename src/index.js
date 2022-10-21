@@ -6,10 +6,12 @@ import {BrowserRouter} from 'react-router-dom';
 import App from './App.js';
 import register from './registerServiceWorker.js';
 
+const portfolioJson = "https://raw.githubusercontent.com/rishisuresh7/rishisuresh7/master/portfolio.json";
+
 ReactDom.render(
     <Provider store= {store}>
         <BrowserRouter>
-            <App/>
+            <App url={portfolioJson} />
         </BrowserRouter>
     </Provider>,
     document.getElementById('root')

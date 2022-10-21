@@ -8,9 +8,9 @@ export const setSelectedId = (id) => {
     }
 }
 
-export const initExperience = () => {
+export const initExperience = (payload) => {
     return {
         type: INIT_EXPERIENCE,
-        payload: utilities.initialize(INIT_EXPERIENCE)
+        payload: utilities.initialize(INIT_EXPERIENCE, payload)
     }
 }

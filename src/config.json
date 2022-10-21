@@ -1,16 +1,16 @@
 {
     "bio" : {
         "name": "Rishi Suresh",
-        "pageTitle": "Rishi Suresh | Software Engineer",
+        "pageTitle": "Rishi Suresh | Software Engineer 2",
         "rotateText": {
             "primaryText": "I build things",
-            "secondaryText": ["for the Web.", "for the Future.", "for just ANYTHING..."]
+            "secondaryText": ["for the Web.", "for the Cloud.", "for the Future."]
         },
         "animateText": true,
         "alternateText": "I build things for the world.",
         "typeTime": 150,
         "deleteTime": 100,
-        "about": "A Software engineer based out of Bangalore, India. \nI enjoy creating things that live on the internet, whether that be websites, applications, \nor anything in between. My goal is to always build products that provide performant experiences. \nShortly before graduating from Visvesvaraya Technological University, I joined the R&D team at Cast Software where I work \nas a REST API developer in Golang.",
+        "about": "A Software engineer based out of Bangalore, India. \nI enjoy creating things that live on the internet, whether that be websites, applications, \nor anything in between. My goal is to always build products that provide performant experiences. \nCurrently working as a Software Engineer 2 at DELL Technologies, where I work on cloud and Kubernetes.",
         "imageUrl": "./assets/img/compressed-removebg.png",
         "email": "rishi9632@gmail.com",
         "signature": "Developed By Rishi Suresh.",
@@ -38,24 +38,67 @@
             "link": "https://www.instagram.com/rishisuresh7/"
         }
     ],
-    "experienceHeading": "My Experience at a Glance",
-    "experience" : [{
+    "experienceHeading": "My Journey so far....",
+    "experience" : [
+        {
+            "companyName": "DELL Technologies",
+            "jobDescription": {
+                "role": "Software Engineer 2",
+                "period": "Aug 2021 - Present",
+                "responsibilities": [
+                    {
+                        "title": "Continous Learning",
+                        "responsibility": "Actively concentrating on growing personal skills as a Software Engineer."
+                    },
+                    {
+                        "title": "Cloud Development",
+                        "responsibility": "Gained great insights to working of kubernetes. Tied multiple loosely-coupled microservices to work as a system in whole."
+                    },
+                    {
+                        "title": "Cloud Scaling",
+                        "responsibility": "Managed to scale applications in kubernetes with operator framework. Ablity to integrate and migrate standalone services to a containerised platform."
+                    }
+                ]
+            }
+        },
+        {
+            "companyName": "Cast Software",
+            "jobDescription": {
+                "role": "Software Engineer",
+                "period": "Apr 2021 - Aug 2021",
+                "responsibilities": [
+                    {
+                        "title": "Devops Development",
+                        "responsibility": "Created an Automation tool to perform ETL operations on a regular basis. Continuous Integration and deployment using Jenkins with Git commit hooks. Consult with engineering team members to determine system loads and develop and improvise improvement plans."
+                    },
+                    {
+                        "title": "System Design",
+                        "responsibility": "Contributed in the development of independent interacting micro-services framework using a proxy service. Consulted with engineering team members to determine system loads and develop improvement plans. Maintained code coverages of more than 90% throughout the development cycle."
+                    },
+                    {
+                        "title": "FrontEnd Development",
+                        "responsibility": "Developed a few websites to incorporate new frameworks and technologies into the tech stack. In the constant process of learing, adapted to software evolutions and improved the means of gaining knowledge. Open source contributions are in order."
+                    }
+                ]
+            }
+        },
+        {
         "companyName": "Cast Software",
         "jobDescription": {
-            "role": "Software Engineer",
-            "period": "Feb 2019 - Present",
+            "role": "Junior Software Engineer",
+            "period": "Feb 2019 - Apr 2021",
             "responsibilities": [
                 {
-                    "responsibility": "Develop scalable and independent microservices based on a multi tenant design."
+                    "title": "BackEnd Development",
+                    "responsibility": "Develop scalable and independent microservices based on a multi tenant design. Work with a variety of different languages, platforms and frameworks, such as Golang, JavaScript, Docker and Neo4j. Adjusted software parameters to boost performance and incorporate new features for meeting increasing customer needs."
                 },
                 {
-                    "responsibility": "Work with a variety of different languages, platforms and frameworks, such as Golang, JavaScript, Docker and Neo4j."
+                    "title": "REST API Development",
+                    "responsibility": "Professional expertise in GO to develop REST API based micro-services. Gained knowledge on graph algorithms and cypher query language in Neo4j to process millions of records on a day-to-day basis. Improved data retrieval times by query tuning to perform tasks 4x faster."
                 },
                 {
-                    "responsibility": "Consult with engineering team members to determine system loads and develop and improvise improvement plans."
-                },
-                {
-                    "responsibility": "Test troubleshooting methods, devise innovative solutions, and document resolutions for inclusion in knowledge base for usage by support team."
+                    "title": "Cloud Development",
+                    "responsibility": "Ability to manage multiple platform independent services using environment isolation and containerisation with Docker and Docker-compose. Regressive strategies to improve personal and technical skills with great precision by learning python and kubernetes."
                 }
             ]
         }
@@ -63,16 +106,19 @@
     {
         "companyName": "Keitai Technologies",
         "jobDescription": {
-            "role": "WD Intern",
+            "role": "Web Development Intern",
             "period": "Jan 2019 - Feb 2019",
             "responsibilities": [
                 {
+                    "title": "FrontEnd Development",
                     "responsibility": "Work on different HTML pages designed for web, cross built for a web application."
                 },
                 {
+                    "title": "FrontEnd Development",
                     "responsibility": "Design REST API calls to a microservice hosted on AWS to provide authentication on the web-app."
                 },
                 {
+                    "title": "FrontEnd Development",
                     "responsibility": "Gain a better knowledge on RESTful API's and error schemes, improve knowledge in JS and some frameworks."
                 }
             ]
@@ -85,12 +131,15 @@
             "period": "Aug 2017 - Aug 2017",
             "responsibilities": [
                 {
+                    "title": "Networking and Security",
                     "responsibility": "Build proficiency in different networking tools such as nmap, zenmap, wireshark etc.."
                 },
                 {
+                    "title": "Networking and Security",
                     "responsibility": "Study the aspects of social engineering to understand in a better way, loopholes in security."
                 },
                 {
+                    "title": "Computer Networs",
                     "responsibility": "Re-iterate on networking models IPv4/IPv6 to understand networking protocols, NAT and other network transmission scenarios"
                 }
             ]
@@ -231,6 +280,10 @@
         {
             "name": "Golang",
             "icon": "./assets/img/go-avatar.png"
+        },
+        {
+            "name": "Kubernetes",
+            "icon": "./assets/img/k8s-avatar.png"
         },
         {
             "name": "Neo4j",
