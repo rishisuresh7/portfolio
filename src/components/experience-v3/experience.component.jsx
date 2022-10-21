@@ -54,7 +54,6 @@ const Experience = ({ initExperience, experience }) => {
         });
     }, []);
 
-    console.log(experience)
     return (
         <div className="experience-container" id="experience">
             <div className="experience-heading">
@@ -63,44 +62,43 @@ const Experience = ({ initExperience, experience }) => {
             {
                 experience && experience?.items.map((item, index) => (
                     <Accordion className={classes.root} key={index} expanded={expanded === `panel-${index}`} onChange={handleChange(`panel-${index}`)}>
-                        <AccordionSummary className={classes.content} expandIcon={<i className="fas fa-arrow-down" style={{color: 'cyan', fontSize:'16px'}} />} >
+                        <AccordionSummary className={classes.content} expandIcon={<i className="fas fa-arrow-down" style={{ color: 'cyan', fontSize: '16px' }} />} >
                             <Typography>
-                                <span style={{color: '#887ce7'}}>{item.name.toUpperCase()}</span> - {item.description?.role}
+                                <span style={{ color: '#887ce7' }}>{item.name.toUpperCase()}</span> - {item.description?.role}
                             </Typography>
                             <Typography className={classes.date}>
                                 {item.description?.period}
                             </Typography>
                         </AccordionSummary>
                         <AccordionDetails className={classes.details}>
-                            <Paper elevation={1} style={{color: 'cyan',background:'linear-gradient(to right, #0f2027, #203a43, #2c5364)'}}>
-                            <List sx={{ width: '100%', maxWidth: 360 }}>
-                                {
-                                    item.description?.responsibilities.map(rs => (
-                                        <Fragment>
-                                            <ListItem alignItems="flex-start" sx={{width: '100%'}}>
-                                                <ListItemText key={rs.id}
-                                                    primary={
-                                                        <Typography color="white">
-                                                            {'- ' + (rs.title || '')}
-                                                        </Typography>
-                                                    }
-                                                secondary={
-                                                    <Typography
-                                                            sx={{ display: 'inline' }}
-                                                            component="span"
-                                                            variant="body2"
-                                                            color="white"
-                                                        >
-                                                            {rs.text}
-                                                    </Typography>
-                                                }
-                                                />
-                                            </ListItem>
-                                            <Divider variant="fullWidth" light="true" component="li" />
-                                        </Fragment>
-                                    ))
-                                }
-                            </List>
+                            <Paper elevation={1} style={{ color: 'cyan', background: 'linear-gradient(to right, #0f2027, #203a43, #2c5364)' }}>
+                                <List sx={{ width: '100%', maxWidth: 360 }}>
+                                    {
+                                        item.description?.responsibilities.map(rs => (
+                                            <Fragment key={rs.id}>
+                                                <ListItem key={rs.id} alignItems="flex-start" sx={{ width: '100%' }}>
+                                                    <ListItemText
+                                                        primary={
+                                                            <Typography>
+                                                                {'- ' + (rs.title || '')}
+                                                            </Typography>
+                                                        }
+                                                        secondary={
+                                                            <Typography
+                                                                style={{ display: 'inline', color: 'azure' }}
+                                                                component="span"
+                                                                variant="body2"
+                                                            >
+                                                                {rs.text}
+                                                            </Typography>
+                                                        }
+                                                    />
+                                                </ListItem>
+                                                <Divider variant="fullWidth" light={true} component="li" />
+                                            </Fragment>
+                                        ))
+                                    }
+                                </List>
                             </Paper>
                         </AccordionDetails>
                     </Accordion>
