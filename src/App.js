@@ -18,7 +18,7 @@ const App = ({ url, signature, email, setGlobalData, resetShowSettings, showSett
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(url)
+        fetch(url, {cache: 'reload'})
             .then(r => r.json())
             .then(resp => {
                 setGlobalData(resp);
