@@ -64,7 +64,7 @@ class Projects extends React.Component {
                     <div className="projects-carousel-cards">
                     {
                         this.items.map((item, key) => {
-                            const left = 50 + (0.3*(this.state.selected - key)* 50)
+                            const left = 50 + (0.6*(this.state.selected - key)* 50)
                             const index = (this.state.selected - key) > 0 ? -(this.state.selected - key) : (this.state.selected - key)
                             return <CustomCard
                             key = {key}

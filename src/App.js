@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import {connect} from 'react-redux';
 import Header from './components/header/header.component.jsx';
 import Profile from './components/profile/profile.component.jsx';
-import Experience from './components/experience-v2/experience.component.jsx';
+import Experience from './components/experience-v3/experience.component.jsx';
 import Projects from './components/projects/projects.component.jsx';
 import Connect from './components/connect/connect.component.jsx';
 import Mail from './components/mail/mail.component.jsx';
@@ -24,7 +24,7 @@ const App = ({signature, email, currentBackground, resetShowSettings, showSettin
             <Helmet>
                     <title>{title}</title>
             </Helmet>
-            <div className='App' id='app' style={{background: currentBackground}} onClick={handleClick}>
+            <div className='App' id='app' style={{background: "linear-gradient(to right, #0f2027, #203a43, #2c5364)"}} onClick={handleClick}>
                 <Header id="header"/>
                 <Profile/>
                 <Experience/>

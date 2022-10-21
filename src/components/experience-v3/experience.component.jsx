@@ -1,0 +1,121 @@
+import React, { useState, useEffect, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import List from '@material-ui/core/List';
+import Paper from '@material-ui/core/Paper';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import { initExperience } from '../experience/experience.actions.jsx';
+import './experience.styles.scss';
+
+const Experience = ({ initExperience, experience }) => {
+    const classes = makeStyles(() => ({
+        root: {
+            width: 'auto',
+            minWidth: 750,
+            maxWidth: 900,
+            width: 900,
+            marginTop: 10,
+            background: "transparent",
+            color: "cyan",
+        },
+        content: {
+            '& div': {
+                display: 'flex',
+                justifyContent: 'space-between',
+            }
+        },
+        date: {
+            position: 'relative',
+            right: '10px'
+        },
+        details: {
+            widht: '100%',
+        }
+    }))();
+
+    const [expanded, setExpanded] = useState(false);
+    const handleChange = (name) => (_, isExpanded) => {
+        setExpanded(isExpanded ? name : false);
+    };
+
+    useEffect(() => {
+        initExperience();
+        document.addEventListener('scroll', () => {
+            const experienceDiv = document.getElementById('experience');
+            if ((window.pageYOffset > experienceDiv.offsetTop / 2) && !experienceDiv.classList.contains('fadein')) {
+                experienceDiv.classList.add('fadein');
+            }
+        });
+    }, []);
+
+    console.log(experience)
+    return (
+        <div className="experience-container" id="experience">
+            <div className="experience-heading">
+                <h2>{experience.heading}</h2>
+            </div>
+            {
+                experience && experience?.items.map((item, index) => (
+                    <Accordion className={classes.root} key={index} expanded={expanded === `panel-${index}`} onChange={handleChange(`panel-${index}`)}>
+                        <AccordionSummary className={classes.content} expandIcon={<i className="fas fa-arrow-down" style={{color: 'cyan', fontSize:'16px'}} />} >
+                            <Typography>
+                                <span style={{color: '#887ce7'}}>{item.name.toUpperCase()}</span> - {item.description?.role}
+                            </Typography>
+                            <Typography className={classes.date}>
+                                {item.description?.period}
+                            </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails className={classes.details}>
+                            <Paper elevation={1} style={{color: 'cyan',background:'linear-gradient(to right, #0f2027, #203a43, #2c5364)'}}>
+                            <List sx={{ width: '100%', maxWidth: 360 }}>
+                                {
+                                    item.description?.responsibilities.map(rs => (
+                                        <Fragment>
+                                            <ListItem alignItems="flex-start" sx={{width: '100%'}}>
+                                                <ListItemText key={rs.id}
+                                                    primary={
+                                                        <Typography color="white">
+                                                            {'- ' + (rs.title || '')}
+                                                        </Typography>
+                                                    }
+                                                secondary={
+                                                    <Typography
+                                                            sx={{ display: 'inline' }}
+                                                            component="span"
+                                                            variant="body2"
+                                                            color="white"
+                                                        >
+                                                            {rs.text}
+                                                    </Typography>
+                                                }
+                                                />
+                                            </ListItem>
+                                            <Divider variant="fullWidth" light="true" component="li" />
+                                        </Fragment>
+                                    ))
+                                }
+                            </List>
+                            </Paper>
+                        </AccordionDetails>
+                    </Accordion>
+                ))
+            }
+        </div>
+    )
+}
+
+const mapStateToProps = state => ({
+    experience: state.experience,
+})
+
+const mapDispatchToProps = dispatch => ({
+    initExperience: () => dispatch(initExperience())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Experience);

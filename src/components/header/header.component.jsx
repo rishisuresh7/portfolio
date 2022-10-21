@@ -44,7 +44,7 @@ const Header = ({setShowSettings, showSettings, logo, initHeader, showIcon, curr
     }
 
     return (
-        <div className="header" id="header" style={{background: currentBackground}}>
+        <div className="header" id="header" >
            <div className="header-content">
             <div className="header-logo" id="animate-header">
                     <span className="header-text">{logo}</span>

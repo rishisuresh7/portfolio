@@ -146,6 +146,7 @@ const initExperience = (experience, heading = 'My Experience at a Glance') => {
                 newResponsibilities = jobDescription.responsibilities.map((item, index) => {
                     return {
                         id: index,
+                        title: item.title,
                         text: item.responsibility
                     }
                 })
