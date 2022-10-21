@@ -16,13 +16,13 @@ import './experience.styles.scss';
 const Experience = ({ initExperience, experience, global }) => {
     const classes = makeStyles(() => ({
         root: {
-            width: 'auto',
             minWidth: 750,
             maxWidth: 900,
             width: 900,
             marginTop: 10,
             background: "transparent",
             color: "cyan",
+            height: 'auto !important',
         },
         content: {
             '& div': {
@@ -32,10 +32,11 @@ const Experience = ({ initExperience, experience, global }) => {
         },
         date: {
             position: 'relative',
-            right: '10px'
         },
         details: {
-            widht: '100%',
+            '& div': {
+                overflow: 'scroll',
+            }
         }
     }))();
 
